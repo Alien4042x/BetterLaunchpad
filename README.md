@@ -107,7 +107,6 @@ Comprehensive customization options with live preview and instant application.
 - `Cmd + ,` - Open Settings
 - `Cmd + F` - Focus search bar
 - `Arrow Keys` - Navigate between pages
-- `Enter` - Launch selected app
 
 ### Customization
 
@@ -217,5 +216,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Made with ❤️ for the macOS community**
 
 [⭐ Star this repo](https://github.com/Alien4042x/BetterLaunchpad) • [🐛 Report Bug](https://github.com/Alien4042x/BetterLaunchpad/issues)
+
+<img width="3508" height="1383" alt="betterlaunchpad_picture" src="https://github.com/user-attachments/assets/d2c3a883-1562-44e1-86a6-d13b8b86a242" />
 
 </div>
