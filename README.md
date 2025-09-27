@@ -12,7 +12,7 @@
 [![Swift](https://img.shields.io/badge/Swift-5.9+-orange?style=flat-square&logo=swift)](https://swift.org/)
 [![SwiftUI](https://img.shields.io/badge/SwiftUI-4.0+-green?style=flat-square&logo=swift)](https://developer.apple.com/xcode/swiftui/)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
-[![Downloads](https://img.shields.io/github/downloads/Alien4042x//total)](https:/BetterLaunchpad/github.com/Alien4042x/BetterLaunchpad/releases)
+[![Downloads](https://img.shields.io/github/downloads/Alien4042x/BetterLaunchpad/total)](https://github.com/Alien4042x/BetterLaunchpad/releases)
 
 [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Localization](#-localization) • [Contributing](#-contributing)
 
