@@ -1,6 +1,8 @@
 # BetterLaunchpad
 
 <div align="center">
+   
+*A modern replacement for the system "Applications" view (Tahoe style) that I didn’t like.*
 
 ![BetterLaunchpad Logo](https://img.shields.io/badge/BetterLaunchpad-v1.0-blue?style=for-the-badge&logo=apple)
 
@@ -176,7 +178,8 @@ BetterLaunchpad/
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+We welcome contributions!
+Please fork the repo, create a branch, and open a Pull Request.
 
 ### Development Setup
 
