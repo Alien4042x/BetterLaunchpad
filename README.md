@@ -211,12 +211,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - 🐛 **Bug Reports** - [Open an issue](https://github.com/Alien4042x/BetterLaunchpad/issues)
 ---
 
+<img width="3552" height="1427" alt="betterlaunchpad_picture" src="https://github.com/user-attachments/assets/c19e5ebc-d1d5-4d8d-bee3-52a1344ed732" />
+
 <div align="center">
 
 **Made with ❤️ for the macOS community**
 
 [⭐ Star this repo](https://github.com/Alien4042x/BetterLaunchpad) • [🐛 Report Bug](https://github.com/Alien4042x/BetterLaunchpad/issues)
 
-<img width="3552" height="1427" alt="betterlaunchpad_picture" src="https://github.com/user-attachments/assets/c19e5ebc-d1d5-4d8d-bee3-52a1344ed732" />
 
 </div>
