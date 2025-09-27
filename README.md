@@ -12,6 +12,7 @@
 [![Swift](https://img.shields.io/badge/Swift-5.9+-orange?style=flat-square&logo=swift)](https://swift.org/)
 [![SwiftUI](https://img.shields.io/badge/SwiftUI-4.0+-green?style=flat-square&logo=swift)](https://developer.apple.com/xcode/swiftui/)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
+[![Downloads](https://img.shields.io/github/downloads/Alien4042x//total)](https:/BetterLaunchpad/github.com/Alien4042x/BetterLaunchpad/releases)
 
 [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Localization](#-localization) • [Contributing](#-contributing)
 
@@ -38,7 +39,7 @@
 
 ### 🌍 **Multi-Language Support**
 
-Supports **14 languages** covering **60%+ of global population**:
+Supports **15 languages** covering **60%+ of global population**:
 
 🇺🇸 English • 🇪🇸 Spanish • 🇫🇷 French • 🇩🇪 German • 🇷🇺 Russian • 🇺🇦 Ukrainian • 🇨🇳 Chinese • 🇯🇵 Japanese • 🇰🇷 Korean • 🇮🇹 Italian • 🇵🇹 Portuguese • 🇳🇱 Dutch • 🇵🇱 Polish • 🇨🇿 Czech • 🇸🇰 Slovak
 
