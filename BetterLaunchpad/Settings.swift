@@ -196,7 +196,6 @@ private struct ColorSwatch: View {
                 .overlay(
                     Circle().stroke(selectionBorderColor, lineWidth: 2).opacity(isSelected ? 1 : 0)
                 )
-                // Extra kontrast jen pro bílou při výběru
                 .overlay(
                     Circle().stroke(Color.black.opacity(0.6), lineWidth: isSelected && r == 1 && g == 1 && b == 1 ? 2 : 0)
                 )

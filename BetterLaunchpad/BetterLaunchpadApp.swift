@@ -162,6 +162,63 @@ private func installGlobalEscToQuit() {
             }
         }
 
+        // Arrow keys and Page Up/Down for pagination when main UI is active
+        let arrowKeyCodes: Set<UInt16> = [123, 124, 125, 126] // left, right, down, up
+        let pagingKeyCodes: Set<UInt16> = [116, 121] // PageUp, PageDown
+
+        if (arrowKeyCodes.contains(event.keyCode) || pagingKeyCodes.contains(event.keyCode)) &&
+            event.modifierFlags.intersection([.command, .option, .control]).isEmpty {
+
+            // Ignore when Settings/About are active
+            if let kw = NSApp.keyWindow, kw.identifier?.rawValue == "about" { return event }
+            if UserDefaults.standard.bool(forKey: "settingsActive") { return event }
+
+            let code = event.keyCode
+            var dir: Int? = nil
+
+            // If typing in a text view (search), only hijack when it won't disrupt typing:
+            // - Empty field: always handle arrows/page keys for paging
+            // - Left arrow at caret position 0: previous page
+            // - Right arrow at caret at end: next page
+            if let tv = NSApp.keyWindow?.firstResponder as? NSTextView {
+                let text = tv.string as NSString
+                let len = text.length
+                let sel = tv.selectedRange()
+                let caretAtStart = (sel.length == 0 && sel.location == 0)
+                let caretAtEnd   = (sel.length == 0 && sel.location == len)
+
+                if len == 0 {
+                    // Empty input: allow paging for these keys
+                    switch code {
+                    case 124, 126, 121: dir = 1   // right/up/PageDown → next
+                    case 123, 125, 116: dir = -1  // left/down/PageUp → previous
+                    default: break
+                    }
+                } else {
+                    // Non-empty: only page at bounds so caret navigation still works
+                    switch code {
+                    case 124: if caretAtEnd   { dir = 1 }
+                    case 123: if caretAtStart { dir = -1 }
+                    case 121: dir = 1 // PageDown
+                    case 116: dir = -1 // PageUp
+                    default: break // up/down inside text do nothing; leave to field
+                    }
+                }
+            } else {
+                // Not in a text field — free to page
+                switch code {
+                case 124, 126, 121: dir = 1   // right/up/PageDown → next
+                case 123, 125, 116: dir = -1  // left/down/PageUp → previous
+                default: break
+                }
+            }
+
+            if let d = dir {
+                NotificationCenter.default.post(name: .blWheel, object: nil, userInfo: ["dir": d])
+                return nil
+            }
+        }
+
         return event
     }
 }
