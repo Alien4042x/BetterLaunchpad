@@ -217,6 +217,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 [⭐ Star this repo](https://github.com/Alien4042x/BetterLaunchpad) • [🐛 Report Bug](https://github.com/Alien4042x/BetterLaunchpad/issues)
 
-<img width="3508" height="1383" alt="betterlaunchpad_picture" src="https://github.com/user-attachments/assets/d2c3a883-1562-44e1-86a6-d13b8b86a242" />
+<img width="3552" height="1427" alt="betterlaunchpad_picture" src="https://github.com/user-attachments/assets/c19e5ebc-d1d5-4d8d-bee3-52a1344ed732" />
 
 </div>
