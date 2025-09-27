@@ -1,0 +1,63 @@
+/* Slovak Localization */
+
+/* Settings */
+"settings" = "Nastavenia";
+"columns" = "Stĺpce";
+"rows" = "Riadky";
+"icon_size" = "Veľkosť ikon";
+"blur_material" = "Materiál rozmazania";
+"tips" = "Tipy";
+"tips_content" = "Použite šípky alebo koliesko myši na navigáciu medzi stránkami. Stlačte Esc na ukončenie aplikácie.";
+"search_placeholder" = "Hľadať aplikácie…";
+
+/* UI Elements */
+"Enable blur" = "Povoliť rozmazanie";
+"Background opacity" = "Priehľadnosť pozadia";
+"Background color" = "Farba pozadia";
+"Label font" = "Písmo popiskov";
+"Label color" = "Farba popiskov";
+"Size" = "Veľkosť";
+"Opacity" = "Priehľadnosť";
+"Family" = "Rodina";
+"Weight" = "Hrúbka";
+
+/* Font Weights */
+"Regular" = "Normálne";
+"Medium" = "Stredné";
+"Semibold" = "Polotučné";
+"Bold" = "Tučné";
+"System" = "Systémové";
+
+/* Colors */
+"Graphite" = "Grafit";
+"Blue" = "Modrá";
+"Purple" = "Fialová";
+"Green" = "Zelená";
+"Orange" = "Oranžová";
+"Black" = "Čierna";
+"White" = "Biela";
+"Gray" = "Sivá";
+
+/* Buttons */
+"Reset to defaults" = "Obnoviť predvolené";
+"Changes apply instantly. Press Esc to quit." = "Zmeny sa aplikujú okamžite. Stlačte Esc na ukončenie.";
+
+/* About */
+"BetterLaunchpad" = "BetterLaunchpad";
+"Version 1.0" = "Verzia 1.0";
+"A modern, customizable application launcher for macOS" = "Moderný, prispôsobiteľný spúšťač aplikácií pre macOS";
+"Customizable Grid" = "Prispôsobiteľná mriežka";
+"Flexible layouts with adjustable rows and columns" = "Flexibilné rozloženia s nastaviteľnými riadkami a stĺpcami";
+"Glass Effects" = "Sklenené efekty";
+"Beautiful transparency and blur effects" = "Krásne efekty priehľadnosti a rozmazania";
+"Smart Search" = "Inteligentné vyhľadávanie";
+"Quick application search and launch" = "Rýchle vyhľadávanie a spúšťanie aplikácií";
+"Theming" = "Témy";
+"Custom colors and fonts for personalization" = "Vlastné farby a písma na personalizáciu";
+"Created with ❤️ for macOS" = "Vytvorené s ❤️ pre macOS";
+"© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
+
+/* Context Menu */
+"Show in Finder" = "Zobraziť vo Finderi";
+"Get Info" = "Informácie";
+"About BetterLaunchpad" = "O BetterLaunchpad";

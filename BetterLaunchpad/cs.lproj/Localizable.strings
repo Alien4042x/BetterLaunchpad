@@ -1,0 +1,63 @@
+/* Czech Localization */
+
+/* Settings */
+"settings" = "Nastavení";
+"columns" = "Sloupce";
+"rows" = "Řádky";
+"icon_size" = "Velikost ikon";
+"blur_material" = "Materiál rozmazání";
+"tips" = "Tipy";
+"tips_content" = "Použijte šipky nebo kolečko myši pro navigaci mezi stránkami. Stiskněte Esc pro ukončení aplikace.";
+"search_placeholder" = "Hledat aplikace…";
+
+/* UI Elements */
+"Enable blur" = "Povolit rozmazání";
+"Background opacity" = "Průhlednost pozadí";
+"Background color" = "Barva pozadí";
+"Label font" = "Písmo popisků";
+"Label color" = "Barva popisků";
+"Size" = "Velikost";
+"Opacity" = "Průhlednost";
+"Family" = "Rodina";
+"Weight" = "Tloušťka";
+
+/* Font Weights */
+"Regular" = "Normální";
+"Medium" = "Střední";
+"Semibold" = "Polotučné";
+"Bold" = "Tučné";
+"System" = "Systémové";
+
+/* Colors */
+"Graphite" = "Grafit";
+"Blue" = "Modrá";
+"Purple" = "Fialová";
+"Green" = "Zelená";
+"Orange" = "Oranžová";
+"Black" = "Černá";
+"White" = "Bílá";
+"Gray" = "Šedá";
+
+/* Buttons */
+"Reset to defaults" = "Obnovit výchozí";
+"Changes apply instantly. Press Esc to quit." = "Změny se aplikují okamžitě. Stiskněte Esc pro ukončení.";
+
+/* About */
+"BetterLaunchpad" = "BetterLaunchpad";
+"Version 1.0" = "Verze 1.0";
+"A modern, customizable application launcher for macOS" = "Moderní, přizpůsobitelný spouštěč aplikací pro macOS";
+"Customizable Grid" = "Přizpůsobitelná mřížka";
+"Flexible layouts with adjustable rows and columns" = "Flexibilní rozložení s nastavitelnými řádky a sloupci";
+"Glass Effects" = "Skleněné efekty";
+"Beautiful transparency and blur effects" = "Krásné efekty průhlednosti a rozmazání";
+"Smart Search" = "Chytré vyhledávání";
+"Quick application search and launch" = "Rychlé vyhledávání a spouštění aplikací";
+"Theming" = "Témata";
+"Custom colors and fonts for personalization" = "Vlastní barvy a písma pro personalizaci";
+"Created with ❤️ for macOS" = "Vytvořeno s ❤️ pro macOS";
+"© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
+
+/* Context Menu */
+"Show in Finder" = "Zobrazit ve Finderu";
+"Get Info" = "Informace";
+"About BetterLaunchpad" = "O BetterLaunchpad";

@@ -1,0 +1,63 @@
+/* Japanese Localization */
+
+/* Settings */
+"settings" = "設定";
+"columns" = "列数";
+"rows" = "行数";
+"icon_size" = "アイコンサイズ";
+"blur_material" = "ぼかし素材";
+"tips" = "ヒント";
+"tips_content" = "矢印キーまたはマウスホイールを使用してページ間を移動します。Escキーを押してアプリを終了します。";
+"search_placeholder" = "アプリケーションを検索…";
+
+/* UI Elements */
+"Enable blur" = "ぼかしを有効にする";
+"Background opacity" = "背景の不透明度";
+"Background color" = "背景色";
+"Label font" = "ラベルフォント";
+"Label color" = "ラベル色";
+"Size" = "サイズ";
+"Opacity" = "不透明度";
+"Family" = "ファミリー";
+"Weight" = "太さ";
+
+/* Font Weights */
+"Regular" = "標準";
+"Medium" = "ミディアム";
+"Semibold" = "セミボールド";
+"Bold" = "ボールド";
+"System" = "システム";
+
+/* Colors */
+"Graphite" = "グラファイト";
+"Blue" = "ブルー";
+"Purple" = "パープル";
+"Green" = "グリーン";
+"Orange" = "オレンジ";
+"Black" = "ブラック";
+"White" = "ホワイト";
+"Gray" = "グレー";
+
+/* Buttons */
+"Reset to defaults" = "デフォルトにリセット";
+"Changes apply instantly. Press Esc to quit." = "変更は即座に適用されます。Escキーを押して終了します。";
+
+/* About */
+"BetterLaunchpad" = "BetterLaunchpad";
+"Version 1.0" = "バージョン 1.0";
+"A modern, customizable application launcher for macOS" = "macOS用のモダンでカスタマイズ可能なアプリケーションランチャー";
+"Customizable Grid" = "カスタマイズ可能なグリッド";
+"Flexible layouts with adjustable rows and columns" = "調整可能な行と列を持つ柔軟なレイアウト";
+"Glass Effects" = "ガラス効果";
+"Beautiful transparency and blur effects" = "美しい透明度とぼかし効果";
+"Smart Search" = "スマート検索";
+"Quick application search and launch" = "アプリケーションの高速検索と起動";
+"Theming" = "テーマ";
+"Custom colors and fonts for personalization" = "パーソナライゼーション用のカスタム色とフォント";
+"Created with ❤️ for macOS" = "macOS用に❤️で作成";
+"© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
+
+/* Context Menu */
+"Show in Finder" = "Finderで表示";
+"Get Info" = "情報を見る";
+"About BetterLaunchpad" = "BetterLaunchpadについて";

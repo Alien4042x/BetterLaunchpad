@@ -1,0 +1,63 @@
+/* English Localization */
+
+/* Settings */
+"settings" = "Settings";
+"columns" = "Columns";
+"rows" = "Rows";
+"icon_size" = "Icon Size";
+"blur_material" = "Blur Material";
+"tips" = "Tips";
+"tips_content" = "Use arrow keys or scroll wheel to navigate between pages. Press Esc to quit the app.";
+"search_placeholder" = "Search applications…";
+
+/* UI Elements */
+"Enable blur" = "Enable blur";
+"Background opacity" = "Background opacity";
+"Background color" = "Background color";
+"Label font" = "Label font";
+"Label color" = "Label color";
+"Size" = "Size";
+"Opacity" = "Opacity";
+"Family" = "Family";
+"Weight" = "Weight";
+
+/* Font Weights */
+"Regular" = "Regular";
+"Medium" = "Medium";
+"Semibold" = "Semibold";
+"Bold" = "Bold";
+"System" = "System";
+
+/* Colors */
+"Graphite" = "Graphite";
+"Blue" = "Blue";
+"Purple" = "Purple";
+"Green" = "Green";
+"Orange" = "Orange";
+"Black" = "Black";
+"White" = "White";
+"Gray" = "Gray";
+
+/* Buttons */
+"Reset to defaults" = "Reset to defaults";
+"Changes apply instantly. Press Esc to quit." = "Changes apply instantly. Press Esc to quit.";
+
+/* About */
+"BetterLaunchpad" = "BetterLaunchpad";
+"Version 1.0" = "Version 1.0";
+"A modern, customizable application launcher for macOS" = "A modern, customizable application launcher for macOS";
+"Customizable Grid" = "Customizable Grid";
+"Flexible layouts with adjustable rows and columns" = "Flexible layouts with adjustable rows and columns";
+"Glass Effects" = "Glass Effects";
+"Beautiful transparency and blur effects" = "Beautiful transparency and blur effects";
+"Smart Search" = "Smart Search";
+"Quick application search and launch" = "Quick application search and launch";
+"Theming" = "Theming";
+"Custom colors and fonts for personalization" = "Custom colors and fonts for personalization";
+"Created with ❤️ for macOS" = "Created with ❤️ for macOS";
+"© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
+
+/* Context Menu */
+"Show in Finder" = "Show in Finder";
+"Get Info" = "Get Info";
+"About BetterLaunchpad" = "About BetterLaunchpad";

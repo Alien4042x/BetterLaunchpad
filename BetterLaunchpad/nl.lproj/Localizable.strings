@@ -1,0 +1,63 @@
+/* Dutch Localization */
+
+/* Settings */
+"settings" = "Instellingen";
+"columns" = "Kolommen";
+"rows" = "Rijen";
+"icon_size" = "Pictogramgrootte";
+"blur_material" = "Vervagingsmateriaal";
+"tips" = "Tips";
+"tips_content" = "Gebruik de pijltjestoetsen of muiswiel om tussen pagina's te navigeren. Druk op Esc om de app af te sluiten.";
+"search_placeholder" = "Zoek applicaties…";
+
+/* UI Elements */
+"Enable blur" = "Vervaging inschakelen";
+"Background opacity" = "Achtergrond doorzichtigheid";
+"Background color" = "Achtergrondkleur";
+"Label font" = "Labellettertype";
+"Label color" = "Labelkleur";
+"Size" = "Grootte";
+"Opacity" = "Doorzichtigheid";
+"Family" = "Familie";
+"Weight" = "Dikte";
+
+/* Font Weights */
+"Regular" = "Normaal";
+"Medium" = "Gemiddeld";
+"Semibold" = "Semi-vet";
+"Bold" = "Vet";
+"System" = "Systeem";
+
+/* Colors */
+"Graphite" = "Grafiet";
+"Blue" = "Blauw";
+"Purple" = "Paars";
+"Green" = "Groen";
+"Orange" = "Oranje";
+"Black" = "Zwart";
+"White" = "Wit";
+"Gray" = "Grijs";
+
+/* Buttons */
+"Reset to defaults" = "Standaardwaarden herstellen";
+"Changes apply instantly. Press Esc to quit." = "Wijzigingen worden direct toegepast. Druk op Esc om af te sluiten.";
+
+/* About */
+"BetterLaunchpad" = "BetterLaunchpad";
+"Version 1.0" = "Versie 1.0";
+"A modern, customizable application launcher for macOS" = "Een moderne, aanpasbare applicatielauncher voor macOS";
+"Customizable Grid" = "Aanpasbaar raster";
+"Flexible layouts with adjustable rows and columns" = "Flexibele lay-outs met instelbare rijen en kolommen";
+"Glass Effects" = "Glaseffecten";
+"Beautiful transparency and blur effects" = "Mooie transparantie- en vervagingseffecten";
+"Smart Search" = "Slim zoeken";
+"Quick application search and launch" = "Snel applicaties zoeken en starten";
+"Theming" = "Thema's";
+"Custom colors and fonts for personalization" = "Aangepaste kleuren en lettertypen voor personalisatie";
+"Created with ❤️ for macOS" = "Gemaakt met ❤️ voor macOS";
+"© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
+
+/* Context Menu */
+"Show in Finder" = "Toon in Finder";
+"Get Info" = "Toon info";
+"About BetterLaunchpad" = "Over BetterLaunchpad";

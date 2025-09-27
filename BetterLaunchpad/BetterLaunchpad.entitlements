@@ -4,7 +4,11 @@
 <dict>
 	<key>com.apple.security.app-sandbox</key>
 	<true/>
+	<key>com.apple.security.automation.apple-events</key>
+	<true/>
 	<key>com.apple.security.files.user-selected.read-only</key>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>BetterLaunchpad needs access to Finder to show app information windows.</string>
 	<true/>
 </dict>
 </plist>

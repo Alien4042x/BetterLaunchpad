@@ -140,6 +140,7 @@ BetterLaunchpad automatically detects your system language and displays the inte
 | Dutch                | nl      | 24M      | ✅ Complete |
 | Czech                | cs      | 10M      | ✅ Complete |
 | Slovak               | sk      | 5M       | ✅ Complete |
+| Ukrainian            | uk      | 30M      | ✅ Complete |
 
 ### Adding New Languages
 

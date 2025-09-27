@@ -6,27 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXContainerItemProxy section */
-		27274B962E7AEC6A009FFF2F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 27274B7F2E7AEC69009FFF2F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 27274B862E7AEC69009FFF2F;
-			remoteInfo = BetterLaunchpad;
-		};
-		27274BA02E7AEC6A009FFF2F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 27274B7F2E7AEC69009FFF2F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 27274B862E7AEC69009FFF2F;
-			remoteInfo = BetterLaunchpad;
-		};
-/* End PBXContainerItemProxy section */
+/* Begin PBXBuildFile section */
+		277E9A1B2E86A56100BA9282 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 277E9A192E86A56100BA9282 /* LICENSE */; };
+		277E9A1C2E86A56100BA9282 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 277E9A1A2E86A56100BA9282 /* README.md */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		27274B872E7AEC69009FFF2F /* BetterLaunchpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterLaunchpad.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		27274B952E7AEC6A009FFF2F /* BetterLaunchpadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetterLaunchpadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		27274B9F2E7AEC6A009FFF2F /* BetterLaunchpadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetterLaunchpadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		277E9A192E86A56100BA9282 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		277E9A1A2E86A56100BA9282 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		277E9A1D2E86A57700BA9282 /* BetterLaunchpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = BetterLaunchpad.app; path = /Users/alien4042x/BetterLaunchpad/build/Debug/BetterLaunchpad.app; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -35,34 +23,10 @@
 			path = BetterLaunchpad;
 			sourceTree = "<group>";
 		};
-		27274B982E7AEC6A009FFF2F /* BetterLaunchpadTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BetterLaunchpadTests;
-			sourceTree = "<group>";
-		};
-		27274BA22E7AEC6A009FFF2F /* BetterLaunchpadUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = BetterLaunchpadUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		27274B842E7AEC69009FFF2F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		27274B922E7AEC6A009FFF2F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		27274B9C2E7AEC6A009FFF2F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,20 +40,9 @@
 			isa = PBXGroup;
 			children = (
 				27274B892E7AEC69009FFF2F /* BetterLaunchpad */,
-				27274B982E7AEC6A009FFF2F /* BetterLaunchpadTests */,
-				27274BA22E7AEC6A009FFF2F /* BetterLaunchpadUITests */,
-				27274B882E7AEC69009FFF2F /* Products */,
+				277E9A192E86A56100BA9282 /* LICENSE */,
+				277E9A1A2E86A56100BA9282 /* README.md */,
 			);
-			sourceTree = "<group>";
-		};
-		27274B882E7AEC69009FFF2F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				27274B872E7AEC69009FFF2F /* BetterLaunchpad.app */,
-				27274B952E7AEC6A009FFF2F /* BetterLaunchpadTests.xctest */,
-				27274B9F2E7AEC6A009FFF2F /* BetterLaunchpadUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,54 +67,8 @@
 			packageProductDependencies = (
 			);
 			productName = BetterLaunchpad;
-			productReference = 27274B872E7AEC69009FFF2F /* BetterLaunchpad.app */;
+			productReference = 277E9A1D2E86A57700BA9282 /* BetterLaunchpad.app */;
 			productType = "com.apple.product-type.application";
-		};
-		27274B942E7AEC6A009FFF2F /* BetterLaunchpadTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 27274BAC2E7AEC6A009FFF2F /* Build configuration list for PBXNativeTarget "BetterLaunchpadTests" */;
-			buildPhases = (
-				27274B912E7AEC6A009FFF2F /* Sources */,
-				27274B922E7AEC6A009FFF2F /* Frameworks */,
-				27274B932E7AEC6A009FFF2F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				27274B972E7AEC6A009FFF2F /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				27274B982E7AEC6A009FFF2F /* BetterLaunchpadTests */,
-			);
-			name = BetterLaunchpadTests;
-			packageProductDependencies = (
-			);
-			productName = BetterLaunchpadTests;
-			productReference = 27274B952E7AEC6A009FFF2F /* BetterLaunchpadTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		27274B9E2E7AEC6A009FFF2F /* BetterLaunchpadUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 27274BAF2E7AEC6A009FFF2F /* Build configuration list for PBXNativeTarget "BetterLaunchpadUITests" */;
-			buildPhases = (
-				27274B9B2E7AEC6A009FFF2F /* Sources */,
-				27274B9C2E7AEC6A009FFF2F /* Frameworks */,
-				27274B9D2E7AEC6A009FFF2F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				27274BA12E7AEC6A009FFF2F /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				27274BA22E7AEC6A009FFF2F /* BetterLaunchpadUITests */,
-			);
-			name = BetterLaunchpadUITests;
-			packageProductDependencies = (
-			);
-			productName = BetterLaunchpadUITests;
-			productReference = 27274B9F2E7AEC6A009FFF2F /* BetterLaunchpadUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -171,18 +78,10 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
-				LastUpgradeCheck = 1640;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					27274B862E7AEC69009FFF2F = {
 						CreatedOnToolsVersion = 16.4;
-					};
-					27274B942E7AEC6A009FFF2F = {
-						CreatedOnToolsVersion = 16.4;
-						TestTargetID = 27274B862E7AEC69009FFF2F;
-					};
-					27274B9E2E7AEC6A009FFF2F = {
-						CreatedOnToolsVersion = 16.4;
-						TestTargetID = 27274B862E7AEC69009FFF2F;
 					};
 				};
 			};
@@ -192,17 +91,29 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				ru,
+				cs,
+				sk,
+				"zh-Hans",
+				es,
+				fr,
+				pt,
+				ja,
+				ko,
+				it,
+				nl,
+				pl,
+				uk,
 			);
 			mainGroup = 27274B7E2E7AEC69009FFF2F;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 27274B882E7AEC69009FFF2F /* Products */;
+			productRefGroup = 27274B7E2E7AEC69009FFF2F;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				27274B862E7AEC69009FFF2F /* BetterLaunchpad */,
-				27274B942E7AEC6A009FFF2F /* BetterLaunchpadTests */,
-				27274B9E2E7AEC6A009FFF2F /* BetterLaunchpadUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -212,20 +123,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		27274B932E7AEC6A009FFF2F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		27274B9D2E7AEC6A009FFF2F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				277E9A1B2E86A56100BA9282 /* LICENSE in Resources */,
+				277E9A1C2E86A56100BA9282 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,34 +138,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		27274B912E7AEC6A009FFF2F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		27274B9B2E7AEC6A009FFF2F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		27274B972E7AEC6A009FFF2F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 27274B862E7AEC69009FFF2F /* BetterLaunchpad */;
-			targetProxy = 27274B962E7AEC6A009FFF2F /* PBXContainerItemProxy */;
-		};
-		27274BA12E7AEC6A009FFF2F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 27274B862E7AEC69009FFF2F /* BetterLaunchpad */;
-			targetProxy = 27274BA02E7AEC6A009FFF2F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		27274BA72E7AEC6A009FFF2F /* Debug */ = {
@@ -274,6 +146,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -303,6 +176,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 58HZ49VDDX;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -328,6 +202,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -338,6 +213,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -367,6 +243,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 58HZ49VDDX;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -385,6 +262,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
@@ -398,6 +276,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 58HZ49VDDX;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -407,6 +286,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Alien-Company.BetterLaunchpad";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +305,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 58HZ49VDDX;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -434,80 +315,13 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Alien-Company.BetterLaunchpad";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		27274BAD2E7AEC6A009FFF2F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 58HZ49VDDX;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Alien-Company.BetterLaunchpadTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetterLaunchpad.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BetterLaunchpad";
-			};
-			name = Debug;
-		};
-		27274BAE2E7AEC6A009FFF2F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 58HZ49VDDX;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Alien-Company.BetterLaunchpadTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetterLaunchpad.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BetterLaunchpad";
-			};
-			name = Release;
-		};
-		27274BB02E7AEC6A009FFF2F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 58HZ49VDDX;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Alien-Company.BetterLaunchpadUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = BetterLaunchpad;
-			};
-			name = Debug;
-		};
-		27274BB12E7AEC6A009FFF2F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 58HZ49VDDX;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Alien-Company.BetterLaunchpadUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = BetterLaunchpad;
 			};
 			name = Release;
 		};
@@ -528,24 +342,6 @@
 			buildConfigurations = (
 				27274BAA2E7AEC6A009FFF2F /* Debug */,
 				27274BAB2E7AEC6A009FFF2F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		27274BAC2E7AEC6A009FFF2F /* Build configuration list for PBXNativeTarget "BetterLaunchpadTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				27274BAD2E7AEC6A009FFF2F /* Debug */,
-				27274BAE2E7AEC6A009FFF2F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		27274BAF2E7AEC6A009FFF2F /* Build configuration list for PBXNativeTarget "BetterLaunchpadUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				27274BB02E7AEC6A009FFF2F /* Debug */,
-				27274BB12E7AEC6A009FFF2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

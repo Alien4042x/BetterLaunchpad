@@ -1,0 +1,63 @@
+/* Russian Localization */
+
+/* Settings */
+"settings" = "Настройки";
+"columns" = "Столбцы";
+"rows" = "Строки";
+"icon_size" = "Размер иконок";
+"blur_material" = "Материал размытия";
+"tips" = "Советы";
+"tips_content" = "Используйте стрелки или колесо прокрутки для навигации между страницами. Нажмите Esc для выхода из приложения.";
+"search_placeholder" = "Поиск приложений…";
+
+/* UI Elements */
+"Enable blur" = "Включить размытие";
+"Background opacity" = "Прозрачность фона";
+"Background color" = "Цвет фона";
+"Label font" = "Шрифт подписей";
+"Label color" = "Цвет подписей";
+"Size" = "Размер";
+"Opacity" = "Прозрачность";
+"Family" = "Семейство";
+"Weight" = "Толщина";
+
+/* Font Weights */
+"Regular" = "Обычный";
+"Medium" = "Средний";
+"Semibold" = "Полужирный";
+"Bold" = "Жирный";
+"System" = "Системный";
+
+/* Colors */
+"Graphite" = "Графит";
+"Blue" = "Синий";
+"Purple" = "Фиолетовый";
+"Green" = "Зелёный";
+"Orange" = "Оранжевый";
+"Black" = "Чёрный";
+"White" = "Белый";
+"Gray" = "Серый";
+
+/* Buttons */
+"Reset to defaults" = "Сбросить к умолчанию";
+"Changes apply instantly. Press Esc to quit." = "Изменения применяются мгновенно. Нажмите Esc для выхода.";
+
+/* About */
+"BetterLaunchpad" = "BetterLaunchpad";
+"Version 1.0" = "Версия 1.0";
+"A modern, customizable application launcher for macOS" = "Современный настраиваемый лаунчер приложений для macOS";
+"Customizable Grid" = "Настраиваемая сетка";
+"Flexible layouts with adjustable rows and columns" = "Гибкие макеты с настраиваемыми строками и столбцами";
+"Glass Effects" = "Стеклянные эффекты";
+"Beautiful transparency and blur effects" = "Красивые эффекты прозрачности и размытия";
+"Smart Search" = "Умный поиск";
+"Quick application search and launch" = "Быстрый поиск и запуск приложений";
+"Theming" = "Темы";
+"Custom colors and fonts for personalization" = "Пользовательские цвета и шрифты для персонализации";
+"Created with ❤️ for macOS" = "Создано с ❤️ для macOS";
+"© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
+
+/* Context Menu */
+"Show in Finder" = "Показать в Finder";
+"Get Info" = "Свойства";
+"About BetterLaunchpad" = "О BetterLaunchpad";

@@ -1,0 +1,63 @@
+/* Korean Localization */
+
+/* Settings */
+"settings" = "설정";
+"columns" = "열";
+"rows" = "행";
+"icon_size" = "아이콘 크기";
+"blur_material" = "블러 재질";
+"tips" = "팁";
+"tips_content" = "화살표 키나 마우스 휠을 사용하여 페이지 간을 탐색하세요. Esc 키를 눌러 앱을 종료하세요.";
+"search_placeholder" = "애플리케이션 검색…";
+
+/* UI Elements */
+"Enable blur" = "블러 활성화";
+"Background opacity" = "배경 불투명도";
+"Background color" = "배경 색상";
+"Label font" = "라벨 폰트";
+"Label color" = "라벨 색상";
+"Size" = "크기";
+"Opacity" = "불투명도";
+"Family" = "패밀리";
+"Weight" = "굵기";
+
+/* Font Weights */
+"Regular" = "보통";
+"Medium" = "중간";
+"Semibold" = "세미볼드";
+"Bold" = "굵게";
+"System" = "시스템";
+
+/* Colors */
+"Graphite" = "그래파이트";
+"Blue" = "파란색";
+"Purple" = "보라색";
+"Green" = "초록색";
+"Orange" = "주황색";
+"Black" = "검은색";
+"White" = "흰색";
+"Gray" = "회색";
+
+/* Buttons */
+"Reset to defaults" = "기본값으로 재설정";
+"Changes apply instantly. Press Esc to quit." = "변경사항이 즉시 적용됩니다. Esc 키를 눌러 종료하세요.";
+
+/* About */
+"BetterLaunchpad" = "BetterLaunchpad";
+"Version 1.0" = "버전 1.0";
+"A modern, customizable application launcher for macOS" = "macOS용 현대적이고 사용자 정의 가능한 애플리케이션 런처";
+"Customizable Grid" = "사용자 정의 가능한 그리드";
+"Flexible layouts with adjustable rows and columns" = "조정 가능한 행과 열이 있는 유연한 레이아웃";
+"Glass Effects" = "글래스 효과";
+"Beautiful transparency and blur effects" = "아름다운 투명도 및 블러 효과";
+"Smart Search" = "스마트 검색";
+"Quick application search and launch" = "빠른 애플리케이션 검색 및 실행";
+"Theming" = "테마";
+"Custom colors and fonts for personalization" = "개인화를 위한 사용자 정의 색상 및 폰트";
+"Created with ❤️ for macOS" = "macOS를 위해 ❤️로 제작";
+"© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
+
+/* Context Menu */
+"Show in Finder" = "Finder에서 보기";
+"Get Info" = "정보 가져오기";
+"About BetterLaunchpad" = "BetterLaunchpad 정보";

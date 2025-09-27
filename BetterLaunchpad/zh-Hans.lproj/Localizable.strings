@@ -1,0 +1,63 @@
+/* Chinese (Simplified) Localization */
+
+/* Settings */
+"settings" = "设置";
+"columns" = "列数";
+"rows" = "行数";
+"icon_size" = "图标大小";
+"blur_material" = "模糊材质";
+"tips" = "提示";
+"tips_content" = "使用方向键或滚轮在页面间导航。按 Esc 键退出应用程序。";
+"search_placeholder" = "搜索应用程序…";
+
+/* UI Elements */
+"Enable blur" = "启用模糊";
+"Background opacity" = "背景透明度";
+"Background color" = "背景颜色";
+"Label font" = "标签字体";
+"Label color" = "标签颜色";
+"Size" = "大小";
+"Opacity" = "透明度";
+"Family" = "字体族";
+"Weight" = "字重";
+
+/* Font Weights */
+"Regular" = "常规";
+"Medium" = "中等";
+"Semibold" = "半粗体";
+"Bold" = "粗体";
+"System" = "系统";
+
+/* Colors */
+"Graphite" = "石墨色";
+"Blue" = "蓝色";
+"Purple" = "紫色";
+"Green" = "绿色";
+"Orange" = "橙色";
+"Black" = "黑色";
+"White" = "白色";
+"Gray" = "灰色";
+
+/* Buttons */
+"Reset to defaults" = "重置为默认值";
+"Changes apply instantly. Press Esc to quit." = "更改立即生效。按 Esc 键退出。";
+
+/* About */
+"BetterLaunchpad" = "BetterLaunchpad";
+"Version 1.0" = "版本 1.0";
+"A modern, customizable application launcher for macOS" = "适用于 macOS 的现代化可定制应用程序启动器";
+"Customizable Grid" = "可定制网格";
+"Flexible layouts with adjustable rows and columns" = "具有可调整行列的灵活布局";
+"Glass Effects" = "玻璃效果";
+"Beautiful transparency and blur effects" = "美丽的透明和模糊效果";
+"Smart Search" = "智能搜索";
+"Quick application search and launch" = "快速应用程序搜索和启动";
+"Theming" = "主题";
+"Custom colors and fonts for personalization" = "用于个性化的自定义颜色和字体";
+"Created with ❤️ for macOS" = "为 macOS 用 ❤️ 制作";
+"© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
+
+/* Context Menu */
+"Show in Finder" = "在访达中显示";
+"Get Info" = "显示简介";
+"About BetterLaunchpad" = "关于 BetterLaunchpad";

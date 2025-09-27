@@ -1,0 +1,63 @@
+/* Spanish Localization */
+
+/* Settings */
+"settings" = "Configuración";
+"columns" = "Columnas";
+"rows" = "Filas";
+"icon_size" = "Tamaño de iconos";
+"blur_material" = "Material de desenfoque";
+"tips" = "Consejos";
+"tips_content" = "Usa las teclas de flecha o la rueda del ratón para navegar entre páginas. Presiona Esc para salir de la aplicación.";
+"search_placeholder" = "Buscar aplicaciones…";
+
+/* UI Elements */
+"Enable blur" = "Activar desenfoque";
+"Background opacity" = "Opacidad del fondo";
+"Background color" = "Color de fondo";
+"Label font" = "Fuente de etiquetas";
+"Label color" = "Color de etiquetas";
+"Size" = "Tamaño";
+"Opacity" = "Opacidad";
+"Family" = "Familia";
+"Weight" = "Grosor";
+
+/* Font Weights */
+"Regular" = "Normal";
+"Medium" = "Medio";
+"Semibold" = "Semi-negrita";
+"Bold" = "Negrita";
+"System" = "Sistema";
+
+/* Colors */
+"Graphite" = "Grafito";
+"Blue" = "Azul";
+"Purple" = "Morado";
+"Green" = "Verde";
+"Orange" = "Naranja";
+"Black" = "Negro";
+"White" = "Blanco";
+"Gray" = "Gris";
+
+/* Buttons */
+"Reset to defaults" = "Restablecer valores predeterminados";
+"Changes apply instantly. Press Esc to quit." = "Los cambios se aplican instantáneamente. Presiona Esc para salir.";
+
+/* About */
+"BetterLaunchpad" = "BetterLaunchpad";
+"Version 1.0" = "Versión 1.0";
+"A modern, customizable application launcher for macOS" = "Un lanzador de aplicaciones moderno y personalizable para macOS";
+"Customizable Grid" = "Cuadrícula personalizable";
+"Flexible layouts with adjustable rows and columns" = "Diseños flexibles con filas y columnas ajustables";
+"Glass Effects" = "Efectos de cristal";
+"Beautiful transparency and blur effects" = "Hermosos efectos de transparencia y desenfoque";
+"Smart Search" = "Búsqueda inteligente";
+"Quick application search and launch" = "Búsqueda y lanzamiento rápido de aplicaciones";
+"Theming" = "Temas";
+"Custom colors and fonts for personalization" = "Colores y fuentes personalizados para personalización";
+"Created with ❤️ for macOS" = "Creado con ❤️ para macOS";
+"© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
+
+/* Context Menu */
+"Show in Finder" = "Mostrar en Finder";
+"Get Info" = "Obtener información";
+"About BetterLaunchpad" = "Acerca de BetterLaunchpad";

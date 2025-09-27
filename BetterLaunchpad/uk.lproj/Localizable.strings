@@ -1,0 +1,64 @@
+/* Ukrainian Localization */
+
+/* Settings */
+"settings" = "Налаштування";
+"columns" = "Стовпці";
+"rows" = "Рядки";
+"icon_size" = "Розмір значків";
+"blur_material" = "Матеріал розмиття";
+"tips" = "Поради";
+"tips_content" = "Використовуйте клавіші зі стрілками або колесо прокрутки для переходу між сторінками. Натисніть Esc, щоб вийти з програми.";
+"search_placeholder" = "Пошук програм…";
+
+/* UI Elements */
+"Enable blur" = "Увімкнути розмиття";
+"Background opacity" = "Непрозорість фону";
+"Background color" = "Колір фону";
+"Label font" = "Шрифт підписів";
+"Label color" = "Колір підписів";
+"Size" = "Розмір";
+"Opacity" = "Непрозорість";
+"Family" = "Сімейство";
+"Weight" = "Насиченість";
+
+/* Font Weights */
+"Regular" = "Звичайний";
+"Medium" = "Середній";
+"Semibold" = "Напівжирний";
+"Bold" = "Жирний";
+"System" = "Системний";
+
+/* Colors */
+"Graphite" = "Графітовий";
+"Blue" = "Синій";
+"Purple" = "Фіолетовий";
+"Green" = "Зелений";
+"Orange" = "Помаранчевий";
+"Black" = "Чорний";
+"White" = "Білий";
+"Gray" = "Сірий";
+
+/* Buttons */
+"Reset to defaults" = "Скинути до стандартних";
+"Changes apply instantly. Press Esc to quit." = "Зміни застосовуються миттєво. Натисніть Esc, щоб вийти.";
+
+/* About */
+"BetterLaunchpad" = "BetterLaunchpad";
+"Version 1.0" = "Версія 1.0";
+"A modern, customizable application launcher for macOS" = "Сучасний, настроюваний лаунчер програм для macOS";
+"Customizable Grid" = "Настроювана сітка";
+"Flexible layouts with adjustable rows and columns" = "Гнучкі макети з налаштовуваними рядками та стовпцями";
+"Glass Effects" = "Скляні ефекти";
+"Beautiful transparency and blur effects" = "Гарні ефекти прозорості та розмиття";
+"Smart Search" = "Розумний пошук";
+"Quick application search and launch" = "Швидкий пошук і запуск програм";
+"Theming" = "Теми";
+"Custom colors and fonts for personalization" = "Користувацькі кольори та шрифти для персоналізації";
+"Created with ❤️ for macOS" = "Створено з ❤️ для macOS";
+"© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
+
+/* Context Menu */
+"Show in Finder" = "Показати у Finder";
+"Get Info" = "Отримати інформацію";
+"About BetterLaunchpad" = "Про BetterLaunchpad";
+
