@@ -1,6 +1,8 @@
 # BetterLaunchpad
 
 <div align="center">
+   
+*A modern replacement for the system "Applications" view (Tahoe style) that I didn’t like.*
 
 ![BetterLaunchpad Logo](https://img.shields.io/badge/BetterLaunchpad-v1.0-blue?style=for-the-badge&logo=apple)
 
@@ -10,6 +12,7 @@
 [![Swift](https://img.shields.io/badge/Swift-5.9+-orange?style=flat-square&logo=swift)](https://swift.org/)
 [![SwiftUI](https://img.shields.io/badge/SwiftUI-4.0+-green?style=flat-square&logo=swift)](https://developer.apple.com/xcode/swiftui/)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
+[![Downloads](https://img.shields.io/github/downloads/Alien4042x/BetterLaunchpad/total)](https://github.com/Alien4042x/BetterLaunchpad/releases)
 
 [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Localization](#-localization) • [Contributing](#-contributing)
 
@@ -37,7 +40,7 @@
 
 ### 🌍 **Multi-Language Support**
 
-Supports **14 languages** covering **60%+ of global population**:
+Supports **15 languages** covering **60%+ of global population**:
 
 🇺🇸 English • 🇪🇸 Spanish • 🇫🇷 French • 🇩🇪 German • 🇷🇺 Russian • 🇺🇦 Ukrainian • 🇨🇳 Chinese • 🇯🇵 Japanese • 🇰🇷 Korean • 🇮🇹 Italian • 🇵🇹 Portuguese • 🇳🇱 Dutch • 🇵🇱 Polish • 🇨🇿 Czech • 🇸🇰 Slovak
 
@@ -108,7 +111,6 @@ Comprehensive customization options with live preview and instant application.
 - `Cmd + ,` - Open Settings
 - `Cmd + F` - Focus search bar
 - `Arrow Keys` - Navigate between pages
-- `Enter` - Launch selected app
 
 ### Customization
 
@@ -237,7 +239,8 @@ BetterLaunchpad/
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+We welcome contributions!
+Please fork the repo, create a branch, and open a Pull Request.
 
 ### Development Setup
 
@@ -272,10 +275,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - 🐛 **Bug Reports** - [Open an issue](https://github.com/Alien4042x/BetterLaunchpad/issues)
 ---
 
+<img width="3552" height="1427" alt="betterlaunchpad_picture" src="https://github.com/user-attachments/assets/c19e5ebc-d1d5-4d8d-bee3-52a1344ed732" />
+
 <div align="center">
 
 **Made with ❤️ for the macOS community**
 
 [⭐ Star this repo](https://github.com/Alien4042x/BetterLaunchpad) • [🐛 Report Bug](https://github.com/Alien4042x/BetterLaunchpad/issues)
+
 
 </div>
