@@ -4,7 +4,7 @@
    
 *A modern replacement for the system "Applications" view (Tahoe style) that I didn’t like.*
 
-![BetterLaunchpad Logo](https://img.shields.io/badge/BetterLaunchpad-v1.0-blue?style=for-the-badge&logo=apple)
+![BetterLaunchpad Logo](https://img.shields.io/badge/BetterLaunchpad-v1.1-blue?style=for-the-badge&logo=apple)
 
 **A modern, customizable application launcher for macOS**
 
