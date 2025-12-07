@@ -57,6 +57,19 @@
 "Created with ❤️ for macOS" = "为 macOS 用 ❤️ 制作";
 "© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
 
+/* Background Types */
+"Background Type" = "背景类型";
+"Glass" = "玻璃";
+"HTML" = "HTML";
+
+/* HTML Themes */
+"Select HTML Background" = "选择 HTML 背景";
+"Loading themes..." = "加载主题中...";
+"Refresh Themes" = "刷新主题";
+"Custom Themes Location:" = "自定义主题位置：";
+"Open Custom Themes Folder" = "打开自定义主题文件夹";
+"HTML Background opacity" = "HTML 背景透明度";
+
 /* Context Menu */
 "Show in Finder" = "在访达中显示";
 "Get Info" = "显示简介";

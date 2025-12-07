@@ -57,6 +57,19 @@
 "Created with ❤️ for macOS" = "macOS用に❤️で作成";
 "© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
 
+/* Background Types */
+"Background Type" = "背景タイプ";
+"Glass" = "ガラス";
+"HTML" = "HTML";
+
+/* HTML Themes */
+"Select HTML Background" = "HTML背景を選択";
+"Loading themes..." = "テーマを読み込み中...";
+"Refresh Themes" = "テーマを更新";
+"Custom Themes Location:" = "カスタムテーマの場所:";
+"Open Custom Themes Folder" = "カスタムテーマフォルダを開く";
+"HTML Background opacity" = "HTML背景の不透明度";
+
 /* Context Menu */
 "Show in Finder" = "Finderで表示";
 "Get Info" = "情報を見る";

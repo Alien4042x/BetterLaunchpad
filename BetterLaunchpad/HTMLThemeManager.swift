@@ -2,7 +2,7 @@
 //  HTMLThemeManager.swift
 //  BetterLaunchpad
 //
-//  Created by Assistant on 02.12.2025.
+//  Created by Radim Veselý on 02.12.2025.
 //
 
 import SwiftUI
@@ -59,7 +59,7 @@ class HTMLThemeManager: ObservableObject {
                 var isDir: ObjCBool = false
                 if FileManager.default.fileExists(atPath: url.path, isDirectory: &isDir), isDir.boolValue {
                     let themeName = url.lastPathComponent
-                    let htmlPath = url.appendingPathComponent("index.html")
+                    let htmlPath = url.appendingPathComponent("\(themeName).html")
                     if FileManager.default.fileExists(atPath: htmlPath.path) {
                         themes.append(themeName)
                     }
@@ -79,5 +79,10 @@ class HTMLThemeManager: ObservableObject {
         }
         
         return customThemes
+    }
+    
+    // Public property for external access
+    var customThemesDirectory: URL {
+        return getCustomThemesDirectory()
     }
 }

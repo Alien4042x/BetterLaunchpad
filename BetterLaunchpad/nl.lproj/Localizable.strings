@@ -57,6 +57,19 @@
 "Created with ❤️ for macOS" = "Gemaakt met ❤️ voor macOS";
 "© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
 
+/* Background Types */
+"Background Type" = "Achtergrondtype";
+"Glass" = "Glas";
+"HTML" = "HTML";
+
+/* HTML Themes */
+"Select HTML Background" = "Selecteer HTML-achtergrond";
+"Loading themes..." = "Thema's laden...";
+"Refresh Themes" = "Thema's vernieuwen";
+"Custom Themes Location:" = "Locatie aangepaste thema's:";
+"Open Custom Themes Folder" = "Open aangepaste thema's map";
+"HTML Background opacity" = "HTML-achtergrond doorzichtigheid";
+
 /* Context Menu */
 "Show in Finder" = "Toon in Finder";
 "Get Info" = "Toon info";

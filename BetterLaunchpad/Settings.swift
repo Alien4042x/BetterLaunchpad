@@ -31,6 +31,11 @@ struct SettingsView: View {
     @AppStorage("labelB") private var labelB: Double = 1.0
     @AppStorage("labelA") private var labelA: Double = 1.0
 
+    @AppStorage("backgroundMode") private var backgroundMode: Int = 0
+    @AppStorage("selectedHTML") private var selectedHTML: String = ""
+
+    @StateObject private var themeManager = HTMLThemeManager.shared
+
     @AppStorage("settingsActive") private var settingsActive: Bool = false
 
     private let materials: [(String, NSVisualEffectView.Material)] = [
@@ -47,6 +52,32 @@ struct SettingsView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             Text(String(localized: "settings")).font(.title3).bold()
+
+            Picker(String(localized: "Background Type"), selection: $backgroundMode) {
+                Text(String(localized: "Glass")).tag(0)
+                Text(String(localized: "HTML")).tag(1)
+            }
+            .pickerStyle(.segmented)
+            .onChange(of: backgroundMode) { oldValue, newValue in
+                if newValue == 1 && selectedHTML.isEmpty {
+                    if !themeManager.availableThemes.isEmpty {
+                        selectedHTML = themeManager.availableThemes.first ?? ""
+                    } else {
+                        backgroundMode = 0
+                        bgR = 0.2; bgG = 0.2; bgB = 0.25
+                    }
+                }
+            }
+
+            if backgroundMode == 1 {
+                HTMLSettingsInline
+                
+                HStack {
+                    Text(String(localized: "HTML Background opacity"))
+                    Slider(value: $bgA, in: 0...1)
+                    Text(String(format: "%.0f%%", bgA * 100)).foregroundColor(.secondary)
+                }
+            }
 
             Stepper("\(String(localized: "columns")): \(cols)", value: $cols, in: 3...8)
             Stepper("\(String(localized: "rows")): \(rows)", value: $rows, in: 2...5)
@@ -68,44 +99,46 @@ struct SettingsView: View {
                 .pickerStyle(.menu)
             }
 
-            // Background appearance
-            Group {
-                Toggle(String(localized: "Enable blur"), isOn: $blurEnabled)
+            if backgroundMode == 0 {
+                // Background appearance
+                Group {
+                    Toggle(String(localized: "Enable blur"), isOn: $blurEnabled)
 
-                // Only show opacity slider when blur is disabled
-                if !blurEnabled {
-                    HStack {
-                        Text(String(localized: "Background opacity"))
-                        Slider(value: $bgA, in: 0...1)
-                        Text(String(format: "%.0f%%", bgA * 100)).foregroundColor(.secondary)
+                    // Only show opacity slider when blur is disabled
+                    if !blurEnabled {
+                        HStack {
+                            Text(String(localized: "Background opacity"))
+                            Slider(value: $bgA, in: 0...1)
+                            Text(String(format: "%.0f%%", bgA * 100)).foregroundColor(.secondary)
+                        }
                     }
-                }
 
-                // Simple color palette
-                Text(String(localized: "Background color")).font(.headline)
-                HStack(spacing: 8) {
-                    ColorSwatch(name: String(localized: "Graphite"), r: 0.2, g: 0.2, b: 0.25, current: (bgR, bgG, bgB)) { (r,g,b) in bgR=r; bgG=g; bgB=b }
-                    ColorSwatch(name: String(localized: "Blue"),     r: 0.2, g: 0.4, b: 0.8, current: (bgR, bgG, bgB)) { (r,g,b) in bgR=r; bgG=g; bgB=b }
-                    ColorSwatch(name: String(localized: "Purple"),   r: 0.5, g: 0.3, b: 0.7, current: (bgR, bgG, bgB)) { (r,g,b) in bgR=r; bgG=g; bgB=b }
-                    ColorSwatch(name: String(localized: "Green"),    r: 0.2, g: 0.6, b: 0.4, current: (bgR, bgG, bgB)) { (r,g,b) in bgR=r; bgG=g; bgB=b }
-                    ColorSwatch(name: String(localized: "Orange"),   r: 0.8, g: 0.5, b: 0.2, current: (bgR, bgG, bgB)) { (r,g,b) in bgR=r; bgG=g; bgB=b }
-                }
+                    // Simple color palette
+                    Text(String(localized: "Background color")).font(.headline)
+                    HStack(spacing: 8) {
+                        ColorSwatch(name: String(localized: "Graphite"), r: 0.2, g: 0.2, b: 0.25, current: (bgR, bgG, bgB)) { (r,g,b) in bgR=r; bgG=g; bgB=b }
+                        ColorSwatch(name: String(localized: "Blue"),     r: 0.2, g: 0.4, b: 0.8, current: (bgR, bgG, bgB)) { (r,g,b) in bgR=r; bgG=g; bgB=b }
+                        ColorSwatch(name: String(localized: "Purple"),   r: 0.5, g: 0.3, b: 0.7, current: (bgR, bgG, bgB)) { (r,g,b) in bgR=r; bgG=g; bgB=b }
+                        ColorSwatch(name: String(localized: "Green"),    r: 0.2, g: 0.6, b: 0.4, current: (bgR, bgG, bgB)) { (r,g,b) in bgR=r; bgG=g; bgB=b }
+                        ColorSwatch(name: String(localized: "Orange"),   r: 0.8, g: 0.5, b: 0.2, current: (bgR, bgG, bgB)) { (r,g,b) in bgR=r; bgG=g; bgB=b }
+                    }
 
-                // Fine-tune RGB
-                VStack(spacing: 6) {
-                    HStack { Text("R"); Slider(value: $bgR, in: 0...1); Text(String(format: "%.2f", bgR)).foregroundColor(.secondary) }
-                    HStack { Text("G"); Slider(value: $bgG, in: 0...1); Text(String(format: "%.2f", bgG)).foregroundColor(.secondary) }
-                    HStack { Text("B"); Slider(value: $bgB, in: 0...1); Text(String(format: "%.2f", bgB)).foregroundColor(.secondary) }
-                }
+                    // Fine-tune RGB
+                    VStack(spacing: 6) {
+                        HStack { Text("R"); Slider(value: $bgR, in: 0...1); Text(String(format: "%.2f", bgR)).foregroundColor(.secondary) }
+                        HStack { Text("G"); Slider(value: $bgG, in: 0...1); Text(String(format: "%.2f", bgG)).foregroundColor(.secondary) }
+                        HStack { Text("B"); Slider(value: $bgB, in: 0...1); Text(String(format: "%.2f", bgB)).foregroundColor(.secondary) }
+                    }
 
-                // Live preview swatch - brighter like font color preview
-                RoundedRectangle(cornerRadius: 8)
-                    .fill(Color(red: bgR, green: bgG, blue: bgB))
-                    .frame(height: 28)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color.white.opacity(0.3), lineWidth: 1)
-                    )
+                    // Live preview swatch - brighter like font color preview
+                    RoundedRectangle(cornerRadius: 8)
+                        .fill(Color(red: bgR, green: bgG, blue: bgB))
+                        .frame(height: 28)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color.white.opacity(0.3), lineWidth: 1)
+                        )
+                }
             }
 
             // Label font settings
@@ -154,6 +187,19 @@ struct SettingsView: View {
                 bgR = 0.08; bgG = 0.08; bgB = 0.10; bgA = 0.60
                 labelFontSize = 12; labelFontWeight = 0; labelFontName = "System"
                 labelR = 1.0; labelG = 1.0; labelB = 1.0; labelA = 1.0
+                
+                if backgroundMode == 1 {
+                    if !themeManager.availableThemes.isEmpty {
+                        selectedHTML = themeManager.availableThemes.first ?? ""
+                    } else {
+                        backgroundMode = 0
+                        bgR = 0.2; bgG = 0.2; bgB = 0.25
+                        selectedHTML = ""
+                    }
+                } else {
+                    backgroundMode = 0
+                    selectedHTML = ""
+                }
             }
             .buttonStyle(.bordered)
 
@@ -170,8 +216,100 @@ struct SettingsView: View {
                 .font(.footnote)
                 .foregroundColor(.secondary)
         }
-        .onAppear { settingsActive = true }
+        .onAppear { 
+            settingsActive = true 
+            
+            // Initialize HTML themes if not already done
+            if !themeManager.isInitialized {
+                print("Initializing themes from Settings...")
+                // The theme manager will initialize automatically
+            }
+            
+            // Set a default HTML theme if none is selected and HTML mode is active
+            if backgroundMode == 1 && selectedHTML.isEmpty && !themeManager.availableThemes.isEmpty {
+                // Wait a bit for themes to load, then set default
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    if self.selectedHTML.isEmpty && !self.themeManager.availableThemes.isEmpty {
+                        self.selectedHTML = self.themeManager.availableThemes.first ?? ""
+                        print("Auto-selected default HTML theme: \(self.selectedHTML)")
+                    }
+                }
+            }
+        }
         .onDisappear { settingsActive = false }
+    }
+
+    private var HTMLSettingsInline: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(String(localized: "Select HTML Background")).font(.headline)
+            
+            if !themeManager.isInitialized {
+                HStack {
+                    ProgressView()
+                        .controlSize(.small)
+                    Text(String(localized: "Loading themes..."))
+                        .foregroundColor(.secondary)
+                }
+                .padding()
+                .frame(height: 150)
+            } else {
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 4) {
+                        ForEach(themeManager.availableThemes, id: \.self) { theme in
+                            Button(action: { selectedHTML = theme }) {
+                                HStack {
+                                    Text(theme)
+                                        .foregroundColor(.primary)
+                                    Spacer()
+                                    if selectedHTML == theme {
+                                        Image(systemName: "checkmark")
+                                            .foregroundColor(.accentColor)
+                                    }
+                                }
+                                .padding(.vertical, 4)
+                                .padding(.horizontal, 8)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 6)
+                                        .fill(selectedHTML == theme ? Color.accentColor.opacity(0.1) : Color.clear)
+                                )
+                            }
+                            .buttonStyle(.plain)
+                        }
+                    }
+                    .padding(.vertical, 4)
+                }
+                .frame(height: 150)
+                
+                HStack {
+                    Button(String(localized: "Refresh Themes")) {
+                        themeManager.refreshThemes()
+                    }
+                    .buttonStyle(.bordered)
+                    .controlSize(.small)
+                    
+                    Spacer()
+                }
+            }
+            
+            Divider()
+            
+            VStack(alignment: .leading, spacing: 4) {
+                Text(String(localized: "Custom Themes Location:")).font(.caption).foregroundColor(.secondary)
+                Text(getCustomThemesDirectory().path)
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .lineLimit(2)
+                
+                Button(String(localized: "Open Custom Themes Folder")) {
+                    NSWorkspace.shared.open(getCustomThemesDirectory())
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                        themeManager.refreshThemes()
+                    }
+                }
+                .buttonStyle(.bordered)
+                .controlSize(.small)
+            }
+        }
     }
 }
 

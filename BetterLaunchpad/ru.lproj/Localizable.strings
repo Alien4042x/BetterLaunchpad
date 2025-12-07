@@ -57,6 +57,19 @@
 "Created with ❤️ for macOS" = "Создано с ❤️ для macOS";
 "© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
 
+/* Background Types */
+"Background Type" = "Тип фона";
+"Glass" = "Стекло";
+"HTML" = "HTML";
+
+/* HTML Themes */
+"Select HTML Background" = "Выбрать HTML-фон";
+"Loading themes..." = "Загрузка тем...";
+"Refresh Themes" = "Обновить темы";
+"Custom Themes Location:" = "Расположение пользовательских тем:";
+"Open Custom Themes Folder" = "Открыть папку пользовательских тем";
+"HTML Background opacity" = "Прозрачность HTML-фона";
+
 /* Context Menu */
 "Show in Finder" = "Показать в Finder";
 "Get Info" = "Свойства";

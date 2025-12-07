@@ -57,6 +57,19 @@
 "Created with ❤️ for macOS" = "Creato con ❤️ per macOS";
 "© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
 
+/* Background Types */
+"Background Type" = "Tipo di sfondo";
+"Glass" = "Vetro";
+"HTML" = "HTML";
+
+/* HTML Themes */
+"Select HTML Background" = "Seleziona sfondo HTML";
+"Loading themes..." = "Caricamento temi...";
+"Refresh Themes" = "Aggiorna temi";
+"Custom Themes Location:" = "Posizione temi personalizzati:";
+"Open Custom Themes Folder" = "Apri cartella temi personalizzati";
+"HTML Background opacity" = "Opacità sfondo HTML";
+
 /* Context Menu */
 "Show in Finder" = "Mostra nel Finder";
 "Get Info" = "Ottieni informazioni";

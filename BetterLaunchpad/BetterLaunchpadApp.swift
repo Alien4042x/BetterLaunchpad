@@ -62,6 +62,7 @@ struct BetterLaunchpadApp: App {
                 .padding(20)
                 .frame(minWidth: 720)
         }
+        .windowLevel(.floating)
 
         // About window
         Window("About BetterLaunchpad", id: "about") {
@@ -275,47 +276,41 @@ extension Notification.Name {
 }
 
 func makeWindowNice() {
-    // Grab the visible main window (safer than windows.first)
     guard let window = NSApp.windows.first(where: { $0.isVisible }) else { return }
 
-    // Use a titled window (visually titlebar-less) so it CAN become key and accept focus
-    window.styleMask.insert([.titled, .resizable, .fullSizeContentView])
+    window.styleMask = [.titled, .fullSizeContentView, .resizable]
     window.titleVisibility = .hidden
     window.titlebarAppearsTransparent = true
     window.toolbar = nil
+    
+    window.contentView?.wantsLayer = true
+    window.contentView?.layer?.backgroundColor = NSColor.clear.cgColor
 
-    // Allow translucency/blur through the window
     window.isOpaque = false
     window.backgroundColor = NSColor.clear
     window.hasShadow = true
 
-    // Critical for glass effect to work
     window.ignoresMouseEvents = false
 
-    // Behavior: fill to visible frame (menu bar & dock stay visible)
-    window.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
+    window.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary, .stationary]
     window.level = .normal
 
     if let screen = window.screen ?? NSScreen.main {
-        let vf = screen.visibleFrame
-        window.setFrame(vf, display: true)
+        let fullFrame = screen.frame
+        window.setFrame(fullFrame, display: true)
     }
+    
     window.makeKeyAndOrderFront(nil)
     window.isMovableByWindowBackground = false
 
-    // Hide traffic lights (safety: if present)
     window.standardWindowButton(.closeButton)?.isHidden = true
     window.standardWindowButton(.miniaturizeButton)?.isHidden = true
     window.standardWindowButton(.zoomButton)?.isHidden = true
 
     window.setFrameAutosaveName("LauncherMainWindow")
 
-    // Prevent window from minimizing when clicking on empty space
     window.hidesOnDeactivate = false
     window.canHide = false
-
-    // (acceptsMouseMovedEvents and async focus block removed)
-
 }
 
 // MARK: - NSVisualEffect (blur)

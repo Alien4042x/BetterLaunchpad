@@ -57,6 +57,19 @@
 "Created with ❤️ for macOS" = "Vytvorené s ❤️ pre macOS";
 "© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
 
+/* Background Types */
+"Background Type" = "Typ pozadia";
+"Glass" = "Sklo";
+"HTML" = "HTML";
+
+/* HTML Themes */
+"Select HTML Background" = "Vybrať HTML pozadie";
+"Loading themes..." = "Načítanie tém...";
+"Refresh Themes" = "Obnoviť témy";
+"Custom Themes Location:" = "Umiestnenie vlastných tém:";
+"Open Custom Themes Folder" = "Otvoriť priečinok vlastných tém";
+"HTML Background opacity" = "Priehľadnosť HTML pozadia";
+
 /* Context Menu */
 "Show in Finder" = "Zobraziť vo Finderi";
 "Get Info" = "Informácie";

@@ -57,6 +57,19 @@
 "Created with ❤️ for macOS" = "macOS를 위해 ❤️로 제작";
 "© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
 
+/* Background Types */
+"Background Type" = "배경 유형";
+"Glass" = "유리";
+"HTML" = "HTML";
+
+/* HTML Themes */
+"Select HTML Background" = "HTML 배경 선택";
+"Loading themes..." = "테마 로딩 중...";
+"Refresh Themes" = "테마 새로고침";
+"Custom Themes Location:" = "사용자 정의 테마 위치:";
+"Open Custom Themes Folder" = "사용자 정의 테마 폴더 열기";
+"HTML Background opacity" = "HTML 배경 불투명도";
+
 /* Context Menu */
 "Show in Finder" = "Finder에서 보기";
 "Get Info" = "정보 가져오기";

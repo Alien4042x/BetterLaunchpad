@@ -28,7 +28,8 @@
 
 ### 🎨 **Customization Options**
 
-- **Background Modes**: Glass blur effects or solid colors
+- **Background Modes**: Glass blur effects, solid colors, or HTML animated themes
+- **HTML Themes**: Built-in animated backgrounds (particles, matrix, gradient, blobs) with custom theme support
 - **Blur Materials**: HUD Window, Sheet, Popover, Menu, Sidebar, and more
 - **Color Palette**: Pre-defined color swatches + custom RGB controls
 - **Typography**: System fonts + custom font families with weight control
@@ -113,10 +114,61 @@ Comprehensive customization options with live preview and instant application.
 
 1. **Open Settings** - `Cmd + ,` or menu bar
 2. **Choose Layout** - Adjust rows, columns, and icon size
-3. **Select Background** - Enable blur for glass effects or use solid colors
-4. **Pick Colors** - Use color swatches or custom RGB sliders
-5. **Customize Fonts** - Choose font family, size, and weight
-6. **Live Preview** - See changes instantly
+3. **Select Background** - Glass effects, solid colors, or HTML animated themes
+4. **HTML Themes** - Choose from built-in themes or add custom HTML/CSS/JS themes
+5. **Pick Colors** - Use color swatches or custom RGB sliders
+6. **Customize Fonts** - Choose font family, size, and weight
+7. **Live Preview** - See changes instantly
+
+### HTML Themes
+
+BetterLaunchpad supports custom HTML/CSS/JavaScript backgrounds for stunning visual effects:
+
+- **Built-in Themes**: particles, matrix, gradient, blobs
+- **Custom Themes**: Add your own HTML themes in `~/Library/Application Support/BetterLaunchpad/CustomThemes/`
+- **Theme Structure**: Create a folder with `theme-name.html`, `theme-name.css`, and optional `theme-name.js`
+- **Live Refresh**: Click "Refresh Themes" in settings to reload custom themes
+
+## 🎨 Creating Custom HTML Themes
+
+You can create your own animated backgrounds using HTML, CSS, and JavaScript.
+
+### Theme Structure
+
+Each theme must be in its own folder with matching filenames:
+
+```
+~/Library/Application Support/BetterLaunchpad/CustomThemes/
+└── mytheme/
+    ├── mytheme.html       # Required: Main HTML file
+    ├── mytheme.css        # Optional: Styles
+    └── mytheme.js         # Optional: JavaScript animations
+```
+
+**Important**: The folder name and all files must have the same name (e.g., `mytheme/mytheme.html`)
+
+### Requirements
+
+- **HTML file**: Link your CSS and JS files with relative paths
+- **CSS**: Set `overflow: hidden` on body to prevent scrollbars
+- **JavaScript**: Use `<canvas>` for animations and handle window resize events
+- **Performance**: Use `requestAnimationFrame()` for smooth 60 FPS animations
+
+### Best Practices
+
+- Keep particle counts reasonable (50-200) for optimal performance
+- Use gradient backgrounds that complement app icons
+- Test themes at different screen sizes and resolutions
+- Check built-in themes in `Resources/HTMLThemes/` for reference examples
+
+### Loading Your Theme
+
+1. Create your theme folder in `~/Library/Application Support/BetterLaunchpad/CustomThemes/`
+2. Open BetterLaunchpad Settings (`Cmd + ,`)
+3. Select "HTML" as Background Type
+4. Click "Refresh Themes" button
+5. Select your theme from the list
+6. Adjust background opacity if needed
 
 ## 🌍 Localization
 
@@ -161,6 +213,13 @@ BetterLaunchpad/
 ├── AboutView.swift             # About dialog
 ├── GlassBackground.swift       # Glass effect implementation
 ├── GlassSearchBar.swift        # Search functionality
+├── HTMLThemeManager.swift      # HTML theme management
+├── Resources/
+│   └── HTMLThemes/            # Built-in HTML themes
+│       ├── particles/
+│       ├── matrix/
+│       ├── gradient/
+│       └── blobs/
 └── Localizations/
     ├── en.lproj/              # English
     ├── es.lproj/              # Spanish
@@ -172,6 +231,7 @@ BetterLaunchpad/
 
 - **AppModel** - Application discovery and management
 - **GlassBackground** - NSVisualEffectView wrapper for blur effects
+- **HTMLThemeManager** - Dynamic HTML theme loading and management
 - **AppPagerView** - Paginated grid layout with smooth transitions
 - **ColorSwatch** - Reusable color picker component
 

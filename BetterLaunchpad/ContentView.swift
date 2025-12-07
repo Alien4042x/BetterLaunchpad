@@ -124,24 +124,58 @@ struct ContentView: View {
     @AppStorage("labelFontWeight") private var labelFontWeight: Int = 0
     @AppStorage("labelFontName") private var labelFontName: String = "System"
 
+    @AppStorage("backgroundMode") private var backgroundMode: Int = 0
+    @AppStorage("selectedHTML") private var selectedHTML: String = ""
+
+    @State private var htmlBackgroundReady = false
+
     var body: some View {
         ZStack {
-            if blurEnabled {
-                GlassBackground(
-                    material: NSVisualEffectView.Material(rawValue: materialRaw) ?? .hudWindow,
-                    tint: Color(red: bgR, green: bgG, blue: bgB),
-                    opacity: bgA,
-                    followsActive: true
-                )
-            } else {
-                Color(red: bgR, green: bgG, blue: bgB)
-                    .opacity(bgA)
-                    .ignoresSafeArea()
-                    .allowsHitTesting(false)
+            Group {
+                switch backgroundMode {
+                case 1:
+                    if findThemeURL(themeName: selectedHTML) != nil {
+                        HTMLBackgroundView(htmlPath: selectedHTML, onReady: {
+                            htmlBackgroundReady = true
+                        })
+                            .ignoresSafeArea()
+                            .allowsHitTesting(false)
+                            .opacity(bgA)
+                    } else {
+                        if blurEnabled {
+                            GlassBackground(
+                                material: NSVisualEffectView.Material(rawValue: materialRaw) ?? .hudWindow,
+                                tint: Color(red: bgR, green: bgG, blue: bgB),
+                                opacity: bgA,
+                                followsActive: true
+                            )
+                        } else {
+                            Color(red: bgR, green: bgG, blue: bgB)
+                                .opacity(bgA)
+                                .ignoresSafeArea()
+                                .allowsHitTesting(false)
+                        }
+                    }
+
+                default:
+                    if blurEnabled {
+                        GlassBackground(
+                            material: NSVisualEffectView.Material(rawValue: materialRaw) ?? .hudWindow,
+                            tint: Color(red: bgR, green: bgG, blue: bgB),
+                            opacity: bgA,
+                            followsActive: true
+                        )
+                    } else {
+                        Color(red: bgR, green: bgG, blue: bgB)
+                            .opacity(bgA)
+                            .ignoresSafeArea()
+                            .allowsHitTesting(false)
+                    }
+                }
             }
+            .zIndex(0)
 
             VStack(spacing: 0) {
-                // Search section with enhanced spacing
                 VStack(spacing: 0) {
                     Spacer().frame(height: 24)
 
@@ -158,7 +192,6 @@ struct ContentView: View {
                     Spacer().frame(height: 32)
                 }
 
-                // Grid / remaining area with improved spacing
                 AppPagerView(
                     apps: filteredApps,
                     cols: cols,
@@ -170,12 +203,33 @@ struct ContentView: View {
                     .padding(.horizontal, 16)
                     .padding(.bottom, 12)
             }
+            .opacity(backgroundMode == 1 && !htmlBackgroundReady ? 0 : 1)
+            .animation(.easeIn(duration: 0.3), value: htmlBackgroundReady)
+            .zIndex(1)
         }
         .frame(minWidth: 880, minHeight: 560)
         .onAppear {
-            // Set initial focus when view appears
+            if backgroundMode != 1 {
+                htmlBackgroundReady = true
+            } else if selectedHTML.isEmpty || findThemeURL(themeName: selectedHTML) == nil {
+                htmlBackgroundReady = true
+            }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 searchFocused = true
+            }
+        }
+        .onChange(of: backgroundMode) { oldValue, newValue in
+            if newValue != 1 {
+                htmlBackgroundReady = true
+            } else if selectedHTML.isEmpty || findThemeURL(themeName: selectedHTML) == nil {
+                htmlBackgroundReady = true
+            } else {
+                htmlBackgroundReady = false
+            }
+        }
+        .onChange(of: selectedHTML) { oldValue, newValue in
+            if backgroundMode == 1 {
+                htmlBackgroundReady = false
             }
         }
     }
@@ -329,7 +383,7 @@ struct AppPagerView: View {
                 return max(baseHSpacing, min(maxHSpacing, need))
             }()
 
-            // Cílová výška vyplnění – posuneme grid níž a víc „rozsadíme“ řádky
+            // Target fill height – move the grid lower and "spacing" the rows more
             let targetFill: CGFloat = 0.78 // 0.5=center, 0.78=lower
             let targetHeight = max(0, availableH * targetFill)
 
@@ -581,7 +635,132 @@ private func showFinderGetInfo(for path: String) {
     }
 }
 
-
 #Preview {
     ContentView()
+}
+
+import WebKit
+struct HTMLBackgroundView: NSViewRepresentable {
+    let htmlPath: String
+    let onReady: () -> Void
+
+    func makeNSView(context: Context) -> WKWebView {
+        let config = WKWebViewConfiguration()
+        let view = WKWebView(frame: .zero, configuration: config)
+        view.setValue(false, forKey: "drawsBackground")
+        
+        view.allowsBackForwardNavigationGestures = false
+        view.enclosingScrollView?.verticalScrollElasticity = .none
+        view.enclosingScrollView?.horizontalScrollElasticity = .none
+        
+        view.layer?.masksToBounds = true
+        if let layer = view.layer {
+            layer.zPosition = -1000
+        }
+
+        view.navigationDelegate = context.coordinator
+        load(into: view)
+        return view
+    }
+
+    func updateNSView(_ nsView: WKWebView, context: Context) {
+        load(into: nsView)
+    }
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator(onReady: onReady)
+    }
+
+    class Coordinator: NSObject, WKNavigationDelegate {
+        let onReady: () -> Void
+        
+        init(onReady: @escaping () -> Void) {
+            self.onReady = onReady
+        }
+        
+        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                self.onReady()
+            }
+        }
+    }
+
+    private func load(into web: WKWebView) {
+        let preferences = WKWebpagePreferences()
+        preferences.allowsContentJavaScript = true
+        
+        if htmlPath.hasPrefix("<html") {
+            web.loadHTMLString(htmlPath, baseURL: nil)
+            web.pageZoom = 1.0
+        } else if htmlPath.hasPrefix("/") {
+            let url = URL(fileURLWithPath: htmlPath)
+            let request = URLRequest(url: url)
+            web.load(request)
+        } else {
+            if let themeURL = findThemeURL(themeName: htmlPath) {
+                let request = URLRequest(url: themeURL)
+                web.load(request)
+            }
+        }
+        
+        web.configuration.defaultWebpagePreferences = preferences
+    }
+}
+
+func getCustomThemesDirectory() -> URL {
+    let appSupport = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+    let customThemes = appSupport.appendingPathComponent("BetterLaunchpad/CustomThemes")
+    
+    if !FileManager.default.fileExists(atPath: customThemes.path) {
+        try? FileManager.default.createDirectory(at: customThemes, withIntermediateDirectories: true)
+    }
+    
+    return customThemes
+}
+
+func findThemeURL(themeName: String) -> URL? {
+    if let bundleURL = Bundle.main.url(forResource: themeName, withExtension: "html", subdirectory: "Resources/HTMLThemes/\(themeName)") {
+        return bundleURL
+    }
+    
+    let customThemeURL = getCustomThemesDirectory().appendingPathComponent(themeName).appendingPathComponent("\(themeName).html")
+    if FileManager.default.fileExists(atPath: customThemeURL.path) {
+        return customThemeURL
+    }
+    
+    return nil
+}
+
+func listAvailableHTMLThemes() -> [String] {
+    var themes: [String] = []
+    
+    if let bundleThemesURL = Bundle.main.url(forResource: "HTMLThemes", withExtension: nil, subdirectory: "Resources") {
+        if let bundleContents = try? FileManager.default.contentsOfDirectory(at: bundleThemesURL, includingPropertiesForKeys: [.isDirectoryKey], options: [.skipsHiddenFiles]) {
+            for url in bundleContents {
+                var isDir: ObjCBool = false
+                if FileManager.default.fileExists(atPath: url.path, isDirectory: &isDir), isDir.boolValue {
+                    let themeName = url.lastPathComponent
+                    let htmlPath = url.appendingPathComponent("\(themeName).html")
+                    if FileManager.default.fileExists(atPath: htmlPath.path) {
+                        themes.append(themeName)
+                    }
+                }
+            }
+        }
+    }
+    
+    let customDir = getCustomThemesDirectory()
+    if let customContents = try? FileManager.default.contentsOfDirectory(at: customDir, includingPropertiesForKeys: [.isDirectoryKey], options: [.skipsHiddenFiles]) {
+        for url in customContents {
+            var isDir: ObjCBool = false
+            if FileManager.default.fileExists(atPath: url.path, isDirectory: &isDir), isDir.boolValue {
+                let indexPath = url.appendingPathComponent("index.html")
+                if FileManager.default.fileExists(atPath: indexPath.path) {
+                    themes.append(url.lastPathComponent)
+                }
+            }
+        }
+    }
+    
+    return Array(Set(themes)).sorted()
 }
