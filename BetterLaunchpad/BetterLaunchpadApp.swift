@@ -279,6 +279,7 @@ func makeWindowNice() {
     guard let window = NSApp.windows.first(where: { $0.isVisible }) else { return }
 
     window.styleMask = [.titled, .fullSizeContentView, .resizable]
+    window.title = ""
     window.titleVisibility = .hidden
     window.titlebarAppearsTransparent = true
     window.toolbar = nil
@@ -296,8 +297,16 @@ func makeWindowNice() {
     window.level = .normal
 
     if let screen = window.screen ?? NSScreen.main {
+        let visibleFrame = screen.visibleFrame
         let fullFrame = screen.frame
-        window.setFrame(fullFrame, display: true)
+        
+        var maxFrame = fullFrame
+        maxFrame.size.width = visibleFrame.size.width
+        maxFrame.size.height = visibleFrame.size.height
+        maxFrame.origin.x = visibleFrame.origin.x
+        maxFrame.origin.y = visibleFrame.origin.y
+        
+        window.setFrame(maxFrame, display: true)
     }
     
     window.makeKeyAndOrderFront(nil)
@@ -306,6 +315,10 @@ func makeWindowNice() {
     window.standardWindowButton(.closeButton)?.isHidden = true
     window.standardWindowButton(.miniaturizeButton)?.isHidden = true
     window.standardWindowButton(.zoomButton)?.isHidden = true
+    
+    if let titlebarView = window.standardWindowButton(.closeButton)?.superview {
+        titlebarView.isHidden = true
+    }
 
     window.setFrameAutosaveName("LauncherMainWindow")
 
