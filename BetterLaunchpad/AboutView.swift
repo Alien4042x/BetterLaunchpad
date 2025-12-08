@@ -49,8 +49,12 @@ struct AboutView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     FeatureRow(icon: "grid", title: String(localized: "Customizable Grid"),
                                description: String(localized: "Flexible layouts with adjustable rows and columns"))
-                    FeatureRow(icon: "sparkles", title: String(localized: "Glass Effects"),
-                               description: String(localized: "Beautiful transparency and blur effects"))
+                    FeatureRow(icon: "sparkles", title: String(localized: "Liquid Glass Effects"),
+                               description: String(localized: "Modern Liquid Glass material with blur and transparency"))
+                    FeatureRow(icon: "star.fill", title: String(localized: "Favorites"),
+                               description: String(localized: "Quick access to your favorite apps"))
+                    FeatureRow(icon: "globe", title: String(localized: "HTML Backgrounds"),
+                               description: String(localized: "Custom animated backgrounds with HTML themes"))
                     FeatureRow(icon: "magnifyingglass", title: String(localized: "Smart Search"),
                                description: String(localized: "Quick application search and launch"))
                     FeatureRow(icon: "paintbrush", title: String(localized: "Theming"),
@@ -76,7 +80,7 @@ struct AboutView: View {
             Spacer()
         }
         .padding(30)
-        .frame(width: 400, height: 500)
+        .frame(width: 480, height: 580)
         .background(Color(NSColor.windowBackgroundColor))
     }
 }
