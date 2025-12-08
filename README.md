@@ -122,16 +122,7 @@ Comprehensive customization options with live preview and instant application.
 6. **Customize Fonts** - Choose font family, size, and weight
 7. **Live Preview** - See changes instantly
 
-### HTML Themes
-
-BetterLaunchpad supports custom HTML/CSS/JavaScript backgrounds for stunning visual effects:
-
-- **Built-in Themes**: particles, matrix, gradient, blobs
-- **Custom Themes**: Add your own HTML themes in `~/Library/Application Support/BetterLaunchpad/CustomThemes/`
-- **Theme Structure**: Create a folder with `theme-name.html`, `theme-name.css`, and optional `theme-name.js`
-- **Live Refresh**: Click "Refresh Themes" in settings to reload custom themes
-
-## 🎨 Creating Custom HTML Themes
+### 🎨 Creating Custom HTML Themes
 
 You can create your own animated backgrounds using HTML, CSS, and JavaScript.
 
@@ -155,13 +146,6 @@ Each theme must be in its own folder with matching filenames:
 - **CSS**: Set `overflow: hidden` on body to prevent scrollbars
 - **JavaScript**: Use `<canvas>` for animations and handle window resize events
 - **Performance**: Use `requestAnimationFrame()` for smooth 60 FPS animations
-
-### Best Practices
-
-- Keep particle counts reasonable (50-200) for optimal performance
-- Use gradient backgrounds that complement app icons
-- Test themes at different screen sizes and resolutions
-- Check built-in themes in `Resources/HTMLThemes/` for reference examples
 
 ### Loading Your Theme
 
