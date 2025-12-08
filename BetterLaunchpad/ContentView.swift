@@ -108,6 +108,9 @@ struct ContentView: View {
     @State private var query = ""
 
     @FocusState private var searchFocused: Bool
+    
+    @State private var showFavoritesModal = false
+    @State private var isStarHovering = false
 
     @AppStorage("cols") private var cols: Int = 7
     @AppStorage("rows") private var rows: Int = 5
@@ -179,13 +182,31 @@ struct ContentView: View {
                 VStack(spacing: 0) {
                     Spacer().frame(height: 24)
 
-                    HStack {
+                    HStack(spacing: 12) {
                         Spacer()
                         GlassSearchBar(
                             text: $query,
                             placeholder: String(localized: "search_placeholder")
                         ) { }
                         .focused($searchFocused)
+                        
+                        Button(action: { showFavoritesModal = true }) {
+                            Image(systemName: "star.fill")
+                                .font(.system(size: 18))
+                                .foregroundColor(isStarHovering ? .yellow : .white)
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .contentShape(Rectangle())
+                        }
+                        .frame(width: 40, height: 40)
+                        .buttonStyle(.plain)
+                        .glassEffect(isStarHovering ? .regular.tint(.white.opacity(0.15)).interactive() : .regular.interactive(), in: .rect(cornerRadius: 12))
+                        .scaleEffect(isStarHovering ? 1.05 : 1.0)
+                        .animation(.spring(response: 0.3, dampingFraction: 0.7), value: isStarHovering)
+                        .onHover { hovering in
+                            isStarHovering = hovering
+                        }
+                        .help(String(localized: "Show Favorites"))
+                        
                         Spacer()
                     }
 
@@ -197,17 +218,38 @@ struct ContentView: View {
                     cols: cols,
                     rows: rows,
                     iconSize: iconSize,
-                    onLaunch: { NSApp.terminate(nil) }
+                    onLaunch: { NSApp.terminate(nil) },
+                    isDisabled: showFavoritesModal
                 )
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                     .padding(.horizontal, 16)
                     .padding(.bottom, 12)
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        searchFocused = false
+                    }
             }
             .opacity(backgroundMode == 1 && !htmlBackgroundReady ? 0 : 1)
             .animation(.easeIn(duration: 0.3), value: htmlBackgroundReady)
             .zIndex(1)
         }
         .frame(minWidth: 880, minHeight: 560)
+        .overlay(
+            Group {
+                if showFavoritesModal {
+                    Color.black.opacity(0.3)
+                        .ignoresSafeArea()
+                        .onTapGesture { showFavoritesModal = false }
+                    
+                    FavoritesModal(
+                        allApps: model.apps,
+                        iconSize: iconSize,
+                        onLaunch: { NSApp.terminate(nil) },
+                        isPresented: $showFavoritesModal
+                    )
+                }
+            }
+        )
         .onAppear {
             if backgroundMode != 1 {
                 htmlBackgroundReady = true
@@ -246,6 +288,7 @@ struct AppPagerView: View {
     let rows: Int
     let iconSize: Double
     let onLaunch: () -> Void
+    let isDisabled: Bool
 
     @State private var page = 0
     @GestureState private var drag: CGFloat = 0
@@ -330,13 +373,20 @@ struct AppPagerView: View {
         }
         .gesture(
             DragGesture(minimumDistance: 20)
-                .updating($drag) { value, state, _ in state = value.translation.width }
+                .updating($drag) { value, state, _ in 
+                    if !isDisabled {
+                        state = value.translation.width
+                    }
+                }
                 .onEnded { value in
-                    if value.translation.width < -40 { pageForward() }
-                    if value.translation.width >  40 { pageBackward() }
+                    if !isDisabled {
+                        if value.translation.width < -40 { pageForward() }
+                        if value.translation.width >  40 { pageBackward() }
+                    }
                 }
         )
         .onReceive(NotificationCenter.default.publisher(for: .blWheel)) { note in
+            guard !isDisabled else { return }
             guard let dir = note.userInfo?["dir"] as? Int else { return }
             // Note: UP ⇒ forward (next page)
             if dir > 0 { pageForward() } else { pageBackward() }
@@ -443,6 +493,8 @@ struct AppIconCell: View {
     let onLaunch: () -> Void
     @State private var hovering = false
     @State private var pressed = false
+    
+    @ObservedObject var favoritesManager = FavoritesManager.shared
 
     @AppStorage("labelFontSize") private var labelFontSize: Double = 12
     @AppStorage("labelFontWeight") private var labelFontWeight: Int = 0
@@ -518,6 +570,18 @@ struct AppIconCell: View {
                 }
             }
             .contextMenu {
+                Button {
+                    favoritesManager.toggleFavorite(app.path)
+                } label: {
+                    if favoritesManager.isFavorite(app.path) {
+                        Label(String(localized: "Remove from Favorites"), systemImage: "star.slash")
+                    } else {
+                        Label(String(localized: "Add to Favorites"), systemImage: "star")
+                    }
+                }
+                
+                Divider()
+                
                 Button {
                     showInFinderThenRestore(path: app.path)
                 } label: {
@@ -664,18 +728,23 @@ struct HTMLBackgroundView: NSViewRepresentable {
     }
 
     func updateNSView(_ nsView: WKWebView, context: Context) {
-        load(into: nsView)
+        if context.coordinator.currentPath != htmlPath {
+            context.coordinator.currentPath = htmlPath
+            load(into: nsView)
+        }
     }
 
     func makeCoordinator() -> Coordinator {
-        Coordinator(onReady: onReady)
+        Coordinator(onReady: onReady, initialPath: htmlPath)
     }
 
     class Coordinator: NSObject, WKNavigationDelegate {
         let onReady: () -> Void
+        var currentPath: String
         
-        init(onReady: @escaping () -> Void) {
+        init(onReady: @escaping () -> Void, initialPath: String) {
             self.onReady = onReady
+            self.currentPath = initialPath
         }
         
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
@@ -763,4 +832,18 @@ func listAvailableHTMLThemes() -> [String] {
     }
     
     return Array(Set(themes)).sorted()
+}
+
+struct GlassButtonStyle: ButtonStyle {
+    @State private var isHovering = false
+    
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? 0.95 : (isHovering ? 1.05 : 1.0))
+            .animation(.spring(response: 0.3, dampingFraction: 0.7), value: isHovering)
+            .animation(.spring(response: 0.2, dampingFraction: 0.8), value: configuration.isPressed)
+            .onHover { hovering in
+                isHovering = hovering
+            }
+    }
 }

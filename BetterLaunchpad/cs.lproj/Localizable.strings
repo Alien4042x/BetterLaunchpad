@@ -74,3 +74,11 @@
 "Show in Finder" = "Zobrazit ve Finderu";
 "Get Info" = "Informace";
 "About BetterLaunchpad" = "O BetterLaunchpad";
+
+/* Favorites */
+"Show Favorites" = "Zobrazit oblíbené";
+"Favorites" = "Oblíbené";
+"Add to Favorites" = "Přidat do oblíbených";
+"Remove from Favorites" = "Odebrat z oblíbených";
+"No favorites yet" = "Zatím žádné oblíbené";
+"Right-click any app and select 'Add to Favorites'" = "Klikněte pravým tlačítkem na aplikaci a vyberte 'Přidat do oblíbených'";

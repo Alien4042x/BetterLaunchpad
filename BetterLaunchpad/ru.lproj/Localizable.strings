@@ -74,3 +74,11 @@
 "Show in Finder" = "Показать в Finder";
 "Get Info" = "Свойства";
 "About BetterLaunchpad" = "О BetterLaunchpad";
+
+/* Favorites */
+"Show Favorites" = "Показать избранное";
+"Favorites" = "Избранное";
+"Add to Favorites" = "Добавить в избранное";
+"Remove from Favorites" = "Удалить из избранного";
+"No favorites yet" = "Пока нет избранного";
+"Right-click any app and select 'Add to Favorites'" = "Щелкните правой кнопкой мыши на приложение и выберите 'Добавить в избранное'";

@@ -74,3 +74,11 @@
 "Show in Finder" = "Toon in Finder";
 "Get Info" = "Toon info";
 "About BetterLaunchpad" = "Over BetterLaunchpad";
+
+/* Favorites */
+"Show Favorites" = "Toon favorieten";
+"Favorites" = "Favorieten";
+"Add to Favorites" = "Voeg toe aan favorieten";
+"Remove from Favorites" = "Verwijder uit favorieten";
+"No favorites yet" = "Nog geen favorieten";
+"Right-click any app and select 'Add to Favorites'" = "Klik met de rechtermuisknop op een app en selecteer 'Voeg toe aan favorieten'";

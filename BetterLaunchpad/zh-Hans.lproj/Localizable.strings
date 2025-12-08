@@ -74,3 +74,11 @@
 "Show in Finder" = "在访达中显示";
 "Get Info" = "显示简介";
 "About BetterLaunchpad" = "关于 BetterLaunchpad";
+
+/* Favorites */
+"Show Favorites" = "显示收藏";
+"Favorites" = "收藏";
+"Add to Favorites" = "添加到收藏";
+"Remove from Favorites" = "从收藏中移除";
+"No favorites yet" = "暂无收藏";
+"Right-click any app and select 'Add to Favorites'" = "右键点击任意应用并选择「添加到收藏」";

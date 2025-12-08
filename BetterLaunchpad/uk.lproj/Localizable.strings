@@ -75,3 +75,11 @@
 "Get Info" = "Отримати інформацію";
 "About BetterLaunchpad" = "Про BetterLaunchpad";
 
+/* Favorites */
+"Show Favorites" = "Показати обране";
+"Favorites" = "Обране";
+"Add to Favorites" = "Додати до обраного";
+"Remove from Favorites" = "Видалити з обраного";
+"No favorites yet" = "Поки немає обраного";
+"Right-click any app and select 'Add to Favorites'" = "Клацніть правою кнопкою миші на програму та виберіть 'Додати до обраного'";
+

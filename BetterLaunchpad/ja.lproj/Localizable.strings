@@ -74,3 +74,11 @@
 "Show in Finder" = "Finderで表示";
 "Get Info" = "情報を見る";
 "About BetterLaunchpad" = "BetterLaunchpadについて";
+
+/* Favorites */
+"Show Favorites" = "お気に入りを表示";
+"Favorites" = "お気に入り";
+"Add to Favorites" = "お気に入りに追加";
+"Remove from Favorites" = "お気に入りから削除";
+"No favorites yet" = "お気に入りはまだありません";
+"Right-click any app and select 'Add to Favorites'" = "アプリを右クリックして「お気に入りに追加」を選択";

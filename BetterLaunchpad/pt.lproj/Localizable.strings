@@ -74,3 +74,11 @@
 "Show in Finder" = "Mostrar no Finder";
 "Get Info" = "Obter informações";
 "About BetterLaunchpad" = "Sobre o BetterLaunchpad";
+
+/* Favorites */
+"Show Favorites" = "Mostrar favoritos";
+"Favorites" = "Favoritos";
+"Add to Favorites" = "Adicionar aos favoritos";
+"Remove from Favorites" = "Remover dos favoritos";
+"No favorites yet" = "Ainda não há favoritos";
+"Right-click any app and select 'Add to Favorites'" = "Clique com o botão direito em qualquer app e selecione 'Adicionar aos favoritos'";

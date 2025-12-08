@@ -16,41 +16,7 @@ struct GlassSearchBar: View {
     @State private var isHovering = false
 
     var body: some View {
-        ZStack {
-            // Enhanced background with subtle gradient
-            ZStack {
-                TransparentBlurView(material: .hudWindow, blending: .withinWindow, followsActive: true)
-
-                // Subtle gradient overlay for depth
-                LinearGradient(
-                    colors: [
-                        Color.white.opacity(focused ? 0.15 : 0.08),
-                        Color.white.opacity(focused ? 0.05 : 0.02)
-                    ],
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
-            }
-            .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
-            .overlay(
-                RoundedRectangle(cornerRadius: 18, style: .continuous)
-                    .stroke(
-                        LinearGradient(
-                            colors: [
-                                Color.white.opacity(focused ? 0.3 : 0.15),
-                                Color.white.opacity(focused ? 0.1 : 0.05)
-                            ],
-                            startPoint: .top,
-                            endPoint: .bottom
-                        ),
-                        lineWidth: focused ? 1.5 : 1
-                    )
-            )
-            .shadow(color: Color.black.opacity(focused ? 0.2 : 0.12), radius: focused ? 20 : 14, y: focused ? 6 : 4)
-            .scaleEffect(focused ? 1.02 : 1.0)
-            .animation(.spring(response: 0.3, dampingFraction: 0.8), value: focused)
-
-            HStack(spacing: 12) {
+        HStack(spacing: 12) {
                 Image(systemName: "magnifyingglass")
                     .font(.system(size: 15, weight: .medium))
                     .foregroundStyle(focused ? .primary : .secondary)
@@ -95,8 +61,8 @@ struct GlassSearchBar: View {
                 }
             }
             .padding(.horizontal, 16)
-        }
         .frame(width: 540, height: 48)
+        .glassEffect(.regular.interactive(), in: .capsule)
         .onAppear {
             // Try multiple times to ensure focus is set
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {

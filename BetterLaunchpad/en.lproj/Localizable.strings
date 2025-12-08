@@ -74,3 +74,11 @@
 "Show in Finder" = "Show in Finder";
 "Get Info" = "Get Info";
 "About BetterLaunchpad" = "About BetterLaunchpad";
+
+/* Favorites */
+"Show Favorites" = "Show Favorites";
+"Favorites" = "Favorites";
+"Add to Favorites" = "Add to Favorites";
+"Remove from Favorites" = "Remove from Favorites";
+"No favorites yet" = "No favorites yet";
+"Right-click any app and select 'Add to Favorites'" = "Right-click any app and select 'Add to Favorites'";
