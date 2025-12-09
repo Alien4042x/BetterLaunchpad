@@ -4,7 +4,9 @@
    
 *A modern replacement for the system "Applications" view (Tahoe style) that I didn’t like.*
 
-![BetterLaunchpad Logo](https://img.shields.io/badge/BetterLaunchpad-v1.1-blue?style=for-the-badge&logo=apple)
+> **Compatibility:** Requires macOS Tahoe 26+ (older versions are no longer supported).
+
+![BetterLaunchpad Logo](https://img.shields.io/badge/BetterLaunchpad-v1.2-blue?style=for-the-badge&logo=apple)
 
 **A modern, customizable application launcher for macOS**
 
@@ -65,7 +67,7 @@ Comprehensive customization options with live preview and instant application.
 
 ### Requirements
 
-- **macOS 15.06+** (Sequoia)
+- **macOS 26.0.1+** (Tahoe)
 - **Xcode 26.0.1+** (for building from source)
 - **Swift 6.2+**
 
@@ -259,7 +261,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - 🐛 **Bug Reports** - [Open an issue](https://github.com/Alien4042x/BetterLaunchpad/issues)
 ---
 
-<img width="3552" height="1427" alt="betterlaunchpad_picture" src="https://github.com/user-attachments/assets/c19e5ebc-d1d5-4d8d-bee3-52a1344ed732" />
+<img width="3552" height="1420" alt="betterlaunchpad_picture" src="https://github.com/user-attachments/assets/fe1873eb-c6aa-4067-9630-fa4590adbade" />
 
 <div align="center">
 
