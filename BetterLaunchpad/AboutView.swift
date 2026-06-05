@@ -34,7 +34,7 @@ struct AboutView: View {
                 .opacity(0.40)
                 .blendMode(.screen)
 
-            VStack(spacing: 22) {
+            VStack(spacing: 20) {
                 header
 
                 VStack(spacing: 10) {
@@ -74,7 +74,8 @@ struct AboutView: View {
                 footer
             }
             .padding(.horizontal, 34)
-            .padding(.vertical, 30)
+            .padding(.top, 48)
+            .padding(.bottom, 30)
         }
         .frame(width: 500, height: 600)
         .onAppear {
@@ -85,9 +86,9 @@ struct AboutView: View {
     }
 
     private var header: some View {
-        VStack(spacing: 14) {
+        VStack(spacing: 13) {
             ZStack {
-                RoundedRectangle(cornerRadius: 30, style: .continuous)
+                RoundedRectangle(cornerRadius: 28, style: .continuous)
                     .fill(
                         LinearGradient(
                             colors: [
@@ -99,16 +100,16 @@ struct AboutView: View {
                             endPoint: .bottomTrailing
                         )
                     )
-                    .frame(width: 132, height: 132)
+                    .frame(width: 118, height: 118)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 30, style: .continuous)
+                        RoundedRectangle(cornerRadius: 28, style: .continuous)
                             .stroke(Color.white.opacity(0.18), lineWidth: 1)
                     )
                     .shadow(color: Color.blue.opacity(0.22), radius: 26, y: 14)
                     .scaleEffect(isAnimating ? 1.02 : 0.98)
 
                 appIcon
-                    .frame(width: 86, height: 86)
+                    .frame(width: 78, height: 78)
                     .shadow(color: Color.black.opacity(0.28), radius: 14, y: 8)
                     .scaleEffect(isAnimating ? 1.0 : 0.94)
             }
