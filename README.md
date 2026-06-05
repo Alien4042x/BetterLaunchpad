@@ -1,273 +1,136 @@
 # BetterLaunchpad
 
-<div align="center">
-   
-*A modern replacement for the system "Applications" view (Tahoe style) that I didn’t like.*
+BetterLaunchpad is a macOS application launcher with a paginated app grid, search, favorites, configurable layout, and custom backgrounds.
 
-> **Compatibility:** Requires macOS Tahoe 26+ (older versions are no longer supported).
+It was built as a replacement for the system Applications-style view, with more control over spacing, appearance, and navigation.
 
-![BetterLaunchpad Logo](https://img.shields.io/badge/BetterLaunchpad-v1.2-blue?style=for-the-badge&logo=apple)
+## Features
 
-**A modern, customizable application launcher for macOS**
+- Custom grid layout with configurable rows, columns, and icon size
+- Fast app search with live filtering
+- Favorites section
+- Keyboard, mouse wheel, and gesture navigation
+- Glass, solid color, and HTML background modes
+- Built-in HTML themes and support for custom themes
+- Configurable label font, color, and icon hover effects
+- Localized interface for 15 languages
 
-[![macOS](https://img.shields.io/badge/macOS-11.0+-blue?style=flat-square&logo=apple)](https://www.apple.com/macos/)
-[![Swift](https://img.shields.io/badge/Swift-5.9+-orange?style=flat-square&logo=swift)](https://swift.org/)
-[![SwiftUI](https://img.shields.io/badge/SwiftUI-4.0+-green?style=flat-square&logo=swift)](https://developer.apple.com/xcode/swiftui/)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
-[![Downloads](https://img.shields.io/github/downloads/Alien4042x/BetterLaunchpad/total)](https://github.com/Alien4042x/BetterLaunchpad/releases)
+## Requirements
 
-[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Localization](#-localization) • [Contributing](#-contributing)
+- macOS 26.0.1 or newer
+- Xcode 26.0.1 or newer for building from source
+- Swift 6.2 or newer
 
-</div>
+## Installation
 
-## 🚀 Features
+Download the latest release from [Releases](https://github.com/Alien4042x/BetterLaunchpad/releases), then move `BetterLaunchpad.app` to your Applications folder.
 
-### ✨ **Core Features**
+To build from source:
 
-- **🎯 Smart Grid Layout** - Customizable rows (2-5) and columns (3-8)
-- **🔍 Intelligent Search** - Fast application search with real-time filtering
-- **🎨 Glass Effects** - Beautiful transparency and blur effects with multiple materials
-- **🌈 Custom Theming** - Personalize colors, fonts, and transparency
-- **⚡ Lightning Fast** - Instant launch and smooth animations
-- **🎮 Intuitive Navigation** - Arrow keys, mouse wheel, and gesture support
+```bash
+git clone https://github.com/Alien4042x/BetterLaunchpad.git
+cd BetterLaunchpad
+open BetterLaunchpad.xcodeproj
+```
 
-### 🎨 **Customization Options**
+In Xcode, select the BetterLaunchpad scheme and run with `Cmd + R`.
 
-- **Background Modes**: Glass blur effects, solid colors, or HTML animated themes
-- **HTML Themes**: Built-in animated backgrounds (particles, matrix, gradient, blobs) with custom theme support
-- **Blur Materials**: HUD Window, Sheet, Popover, Menu, Sidebar, and more
-- **Color Palette**: Pre-defined color swatches + custom RGB controls
-- **Typography**: System fonts + custom font families with weight control
-- **Layout**: Flexible grid with adjustable icon sizes (40-128pt)
+## Usage
 
-### 🌍 **Multi-Language Support**
+- Launch BetterLaunchpad to show the app grid
+- Type to search applications
+- Click an app icon to launch it
+- Use arrow keys, mouse wheel, or swipe gestures to change pages
+- Press `Esc` to quit
+- Press `Cmd + ,` to open Settings
+- Press `Cmd + F` to focus search
 
-Supports **15 languages** covering **60%+ of global population**:
+## Customization
+
+Settings include:
+
+- Grid rows and columns
+- Icon size
+- Background type and opacity
+- Built-in or custom HTML themes
+- Label font, size, weight, color, and opacity
+- Icon hover effect
+
+Changes apply immediately.
+
+## Custom HTML Themes
+
+Custom themes live here:
+
+```text
+~/Library/Application Support/BetterLaunchpad/CustomThemes/
+```
+
+Each theme needs its own folder. The folder and file names must match:
+
+```text
+CustomThemes/
+└── mytheme/
+    ├── mytheme.html
+    ├── mytheme.css
+    └── mytheme.js
+```
+
+Only the HTML file is required. CSS and JavaScript are optional.
+
+Recommended theme rules:
+
+- Use relative paths for CSS and JavaScript
+- Set `overflow: hidden` to avoid scrollbars
+- Use `requestAnimationFrame()` for animation
+- Handle window resize if you use canvas
+
+After adding a theme, open Settings, choose HTML background mode, and refresh the theme list.
+
+## Localization
+
+Supports 15 languages covering 60%+ of the global population:
 
 🇺🇸 English • 🇪🇸 Spanish • 🇫🇷 French • 🇩🇪 German • 🇷🇺 Russian • 🇺🇦 Ukrainian • 🇨🇳 Chinese • 🇯🇵 Japanese • 🇰🇷 Korean • 🇮🇹 Italian • 🇵🇹 Portuguese • 🇳🇱 Dutch • 🇵🇱 Polish • 🇨🇿 Czech • 🇸🇰 Slovak
 
-> ⚠️ Translations were generated with the help of AI.  
-> They may not be 100% perfect – contributions are welcome!
+| Language | Code | Status |
+| --- | --- | --- |
+| English | en | ✅ Complete |
+| Czech | cs | ✅ Complete |
+| Slovak | sk | ✅ Complete |
+| German | de | ✅ Complete |
+| French | fr | ✅ Complete |
+| Spanish | es | ✅ Complete |
+| Italian | it | ✅ Complete |
+| Dutch | nl | ✅ Complete |
+| Portuguese | pt | ✅ Complete |
+| Polish | pl | ✅ Complete |
+| Russian | ru | ✅ Complete |
+| Ukrainian | uk | ✅ Complete |
+| Japanese | ja | ✅ Complete |
+| Korean | ko | ✅ Complete |
+| Chinese (Simplified) | zh-Hans | ✅ Complete |
 
-## 📸 Screenshots
+To add a language, create a new `[language-code].lproj/Localizable.strings` file, translate the keys from `en.lproj/Localizable.strings`, and add the localization in Xcode.
 
-### Glass Effect Mode
+## Project Structure
 
-Beautiful transparency with customizable blur materials and color tinting.
-
-### Solid Color Mode
-
-Clean, solid backgrounds with full opacity control and vibrant colors.
-
-### Settings Panel
-
-Comprehensive customization options with live preview and instant application.
-
-## 🛠 Installation
-
-### Requirements
-
-- **macOS 26.0.1+** (Tahoe)
-- **Xcode 26.0.1+** (for building from source)
-- **Swift 6.2+**
-
-### Build from Source
-
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/Alien4042x/BetterLaunchpad.git
-   cd BetterLaunchpad
-   ```
-
-2. **Open in Xcode**
-
-   ```bash
-   open BetterLaunchpad.xcodeproj
-   ```
-
-3. **Build and Run**
-   - Select your target device/simulator
-   - Press `Cmd + R` to build and run
-   - Or use `Product > Run` from the menu
-
-### Download Release
-
-- Download the latest release from [Releases](https://github.com/Alien4042x/BetterLaunchpad/releases)
-- Drag `BetterLaunchpad.app` to your Applications folder
-- Launch and enjoy!
-
-## 🎯 Usage
-
-### Basic Usage
-
-1. **Launch BetterLaunchpad** - The app fills your screen with a beautiful grid
-2. **Search Applications** - Type to filter apps instantly
-3. **Navigate** - Use arrow keys, mouse wheel, or swipe gestures
-4. **Launch Apps** - Click any app icon to launch
-5. **Quit** - Press `Esc` to exit
-
-### Keyboard Shortcuts
-
-- `Esc` - Quit application
-- `Cmd + ,` - Open Settings
-- `Cmd + F` - Focus search bar
-- `Arrow Keys` - Navigate between pages
-
-### Customization
-
-1. **Open Settings** - `Cmd + ,` or menu bar
-2. **Choose Layout** - Adjust rows, columns, and icon size
-3. **Select Background** - Glass effects, solid colors, or HTML animated themes
-4. **HTML Themes** - Choose from built-in themes or add custom HTML/CSS/JS themes
-5. **Pick Colors** - Use color swatches or custom RGB sliders
-6. **Customize Fonts** - Choose font family, size, and weight
-7. **Live Preview** - See changes instantly
-
-### 🎨 Creating Custom HTML Themes
-
-You can create your own animated backgrounds using HTML, CSS, and JavaScript.
-
-### Theme Structure
-
-Each theme must be in its own folder with matching filenames:
-
-```
-~/Library/Application Support/BetterLaunchpad/CustomThemes/
-└── mytheme/
-    ├── mytheme.html       # Required: Main HTML file
-    ├── mytheme.css        # Optional: Styles
-    └── mytheme.js         # Optional: JavaScript animations
-```
-
-**Important**: The folder name and all files must have the same name (e.g., `mytheme/mytheme.html`)
-
-### Requirements
-
-- **HTML file**: Link your CSS and JS files with relative paths
-- **CSS**: Set `overflow: hidden` on body to prevent scrollbars
-- **JavaScript**: Use `<canvas>` for animations and handle window resize events
-- **Performance**: Use `requestAnimationFrame()` for smooth 60 FPS animations
-
-### Loading Your Theme
-
-1. Create your theme folder in `~/Library/Application Support/BetterLaunchpad/CustomThemes/`
-2. Open BetterLaunchpad Settings (`Cmd + ,`)
-3. Select "HTML" as Background Type
-4. Click "Refresh Themes" button
-5. Select your theme from the list
-6. Adjust background opacity if needed
-
-## 🌍 Localization
-
-BetterLaunchpad automatically detects your system language and displays the interface accordingly.
-
-### Supported Languages
-
-| Language             | Code    | Speakers | Status      |
-| -------------------- | ------- | -------- | ----------- |
-| English              | en      | 1.5B     | ✅ Complete |
-| Spanish              | es      | 500M     | ✅ Complete |
-| Chinese (Simplified) | zh-Hans | 918M     | ✅ Complete |
-| French               | fr      | 280M     | ✅ Complete |
-| Russian              | ru      | 260M     | ✅ Complete |
-| Portuguese           | pt      | 260M     | ✅ Complete |
-| Japanese             | ja      | 125M     | ✅ Complete |
-| Korean               | ko      | 77M      | ✅ Complete |
-| German               | de      | 100M     | ✅ Complete |
-| Italian              | it      | 65M      | ✅ Complete |
-| Polish               | pl      | 45M      | ✅ Complete |
-| Dutch                | nl      | 24M      | ✅ Complete |
-| Czech                | cs      | 10M      | ✅ Complete |
-| Slovak               | sk      | 5M       | ✅ Complete |
-| Ukrainian            | uk      | 30M      | ✅ Complete |
-
-### Adding New Languages
-
-1. Create `[language-code].lproj/Localizable.strings`
-2. Translate all keys from `en.lproj/Localizable.strings`
-3. Add the language to Xcode project localizations
-4. Test with system language change
-
-## 🏗 Architecture
-
-### Project Structure
-
-```
+```text
 BetterLaunchpad/
-├── BetterLaunchpadApp.swift    # Main app entry point
-├── ContentView.swift           # Main UI and app grid
-├── Settings.swift              # Settings panel
-├── AboutView.swift             # About dialog
-├── GlassBackground.swift       # Glass effect implementation
-├── GlassSearchBar.swift        # Search functionality
-├── HTMLThemeManager.swift      # HTML theme management
+├── BetterLaunchpadApp.swift
+├── ContentView.swift
+├── Settings.swift
+├── AboutView.swift
+├── GlassBackground.swift
+├── GlassSearchBar.swift
+├── HTMLThemeManager.swift
+├── FavoritesManager.swift
+├── FavoritesModal.swift
 ├── Resources/
-│   └── HTMLThemes/            # Built-in HTML themes
-│       ├── particles/
-│       ├── matrix/
-│       ├── gradient/
-│       └── blobs/
-└── Localizations/
-    ├── en.lproj/              # English
-    ├── es.lproj/              # Spanish
-    ├── fr.lproj/              # French
-    └── ...                    # Other languages
+│   └── HTMLThemes/
+└── *.lproj/
 ```
 
-### Key Components
+## License
 
-- **AppModel** - Application discovery and management
-- **GlassBackground** - NSVisualEffectView wrapper for blur effects
-- **HTMLThemeManager** - Dynamic HTML theme loading and management
-- **AppPagerView** - Paginated grid layout with smooth transitions
-- **ColorSwatch** - Reusable color picker component
-
-## 🤝 Contributing
-
-We welcome contributions!
-Please fork the repo, create a branch, and open a Pull Request.
-
-### Development Setup
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Make your changes
-4. Add tests if applicable
-5. Commit: `git commit -m 'Add amazing feature'`
-6. Push: `git push origin feature/amazing-feature`
-7. Open a Pull Request
-
-### Areas for Contribution
-
-- 🌍 **Translations** - Add support for more languages
-- 🎨 **Themes** - Create new visual themes and effects
-- 🚀 **Performance** - Optimize app launch and search speed
-- 🐛 **Bug Fixes** - Report and fix issues
-- 📚 **Documentation** - Improve docs and examples
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **Apple** - For the amazing SwiftUI framework and macOS platform
-- **Community** - For feedback, bug reports, and feature requests
-- **Translators** - For making BetterLaunchpad accessible worldwide
-
-## 📞 Support
-
-- 🐛 **Bug Reports** - [Open an issue](https://github.com/Alien4042x/BetterLaunchpad/issues)
----
-
-<img width="3552" height="1420" alt="betterlaunchpad_picture" src="https://github.com/user-attachments/assets/fe1873eb-c6aa-4067-9630-fa4590adbade" />
-
-<div align="center">
-
-**Made with ❤️ for the macOS community**
-
-[⭐ Star this repo](https://github.com/Alien4042x/BetterLaunchpad) • [🐛 Report Bug](https://github.com/Alien4042x/BetterLaunchpad/issues)
-
-
-</div>
+BetterLaunchpad is licensed under the MIT License. See [LICENSE](LICENSE).
