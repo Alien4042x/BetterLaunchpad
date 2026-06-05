@@ -2,6 +2,21 @@
 
 /* Settings */
 "settings" = "Nastavení";
+"Layout" = "Rozložení";
+"Background" = "Pozadí";
+"Icons" = "Ikony";
+"Labels" = "Popisky";
+"Advanced" = "Pokročilé";
+"Grid" = "Mřížka";
+"Preview" = "Náhled";
+"Theme Library" = "Knihovna témat";
+"apps per page" = "aplikací na stránku";
+"Choose glass or animated HTML backgrounds." = "Vyberte skleněné nebo animované HTML pozadí.";
+"Pick how app icons react when you hover." = "Vyberte, jak ikony reagují při najetí myší.";
+"Tune app label typography and color." = "Upravte typografii a barvu popisků aplikací.";
+"Manage theme folders and general controls." = "Spravujte složky témat a obecné ovládání.";
+"Set grid density and icon size." = "Nastavte hustotu mřížky a velikost ikon.";
+"The original default is Liquid Glow." = "Původní výchozí efekt je Liquid Glow.";
 "columns" = "Sloupce";
 "rows" = "Řádky";
 "icon_size" = "Velikost ikon";
@@ -16,6 +31,19 @@
 "Background color" = "Barva pozadí";
 "Label font" = "Písmo popisků";
 "Label color" = "Barva popisků";
+"Icon hover effect" = "Efekt při najetí na ikonu";
+"Liquid Glow" = "Liquid Glow";
+"Lift" = "Zvednutí";
+"Zoom" = "Přiblížení";
+"Tilt" = "Naklonění";
+"Bounce" = "Odpružení";
+"Minimal" = "Minimalistický";
+"Keeps the current glass glow with a soft scale animation." = "Zachová současnou skleněnou záři s jemným zvětšením.";
+"Raises the icon with a cleaner shadow and less glow." = "Zvedne ikonu s čistším stínem a menší září.";
+"Focuses on a stronger zoom while keeping the icon centered." = "Silněji přiblíží ikonu a drží ji uprostřed.";
+"Adds a subtle 3D tilt for a more playful launcher feel." = "Přidá jemné 3D naklonění pro hravější pocit.";
+"Uses a springy bounce for a more energetic hover." = "Použije pružné odskočení pro živější hover.";
+"Keeps hover feedback restrained for a calmer desktop." = "Drží hover efekt decentní pro klidnější plochu.";
 "Size" = "Velikost";
 "Opacity" = "Průhlednost";
 "Family" = "Rodina";

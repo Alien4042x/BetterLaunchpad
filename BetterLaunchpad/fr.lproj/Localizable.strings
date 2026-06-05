@@ -60,8 +60,38 @@
 "Created with ❤️ for macOS" = "Créé avec ❤️ pour macOS";
 "© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
 
+/* Settings Redesign */
+"Layout" = "Disposition";
+"Background" = "Arrière-plan";
+"Icons" = "Icônes";
+"Labels" = "Libellés";
+"Advanced" = "Avancé";
+"Grid" = "Grille";
+"Preview" = "Aperçu";
+"Theme Library" = "Bibliothèque de thèmes";
+"apps per page" = "apps par page";
+"Choose glass or animated HTML backgrounds." = "Choisissez des arrière-plans en verre ou HTML animés.";
+"Pick how app icons react when you hover." = "Choisissez la réaction des icônes au survol.";
+"Tune app label typography and color." = "Ajustez la typographie et la couleur des libellés.";
+"Manage theme folders and general controls." = "Gérez les dossiers de thèmes et les contrôles généraux.";
+"Set grid density and icon size." = "Réglez la densité de la grille et la taille des icônes.";
+"The original default is Liquid Glow." = "Le réglage par défaut d’origine est Liquid Glow.";
+"Icon hover effect" = "Effet de survol des icônes";
+"Liquid Glow" = "Liquid Glow";
+"Lift" = "Élévation";
+"Zoom" = "Zoom";
+"Tilt" = "Inclinaison";
+"Bounce" = "Rebond";
+"Minimal" = "Minimal";
+"Keeps the current glass glow with a soft scale animation." = "Conserve la lueur de verre actuelle avec une animation d’échelle douce.";
+"Raises the icon with a cleaner shadow and less glow." = "Soulève l’icône avec une ombre plus nette et moins de lueur.";
+"Focuses on a stronger zoom while keeping the icon centered." = "Met l’accent sur un zoom plus marqué tout en gardant l’icône centrée.";
+"Adds a subtle 3D tilt for a more playful launcher feel." = "Ajoute une légère inclinaison 3D pour un lanceur plus dynamique.";
+"Uses a springy bounce for a more energetic hover." = "Utilise un rebond élastique pour un survol plus énergique.";
+"Keeps hover feedback restrained for a calmer desktop." = "Garde un retour au survol discret pour un bureau plus calme.";
+
 /* Background Types */
-"Background Type" = "Type d'arrière-plan";
+"Background Type" = "Type d’arrière-plan";
 "Glass" = "Verre";
 "HTML" = "HTML";
 

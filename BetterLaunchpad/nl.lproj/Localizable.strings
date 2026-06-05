@@ -60,6 +60,36 @@
 "Created with ❤️ for macOS" = "Gemaakt met ❤️ voor macOS";
 "© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
 
+/* Settings Redesign */
+"Layout" = "Indeling";
+"Background" = "Achtergrond";
+"Icons" = "Iconen";
+"Labels" = "Labels";
+"Advanced" = "Geavanceerd";
+"Grid" = "Raster";
+"Preview" = "Voorbeeld";
+"Theme Library" = "Themabibliotheek";
+"apps per page" = "apps per pagina";
+"Choose glass or animated HTML backgrounds." = "Kies glasachtige of geanimeerde HTML-achtergronden.";
+"Pick how app icons react when you hover." = "Kies hoe app-iconen reageren wanneer je eroverheen gaat.";
+"Tune app label typography and color." = "Pas typografie en kleur van app-labels aan.";
+"Manage theme folders and general controls." = "Beheer themamappen en algemene bediening.";
+"Set grid density and icon size." = "Stel rasterdichtheid en icoongrootte in.";
+"The original default is Liquid Glow." = "De oorspronkelijke standaard is Liquid Glow.";
+"Icon hover effect" = "Hover-effect voor iconen";
+"Liquid Glow" = "Liquid Glow";
+"Lift" = "Optillen";
+"Zoom" = "Zoomen";
+"Tilt" = "Kantelen";
+"Bounce" = "Stuiteren";
+"Minimal" = "Minimaal";
+"Keeps the current glass glow with a soft scale animation." = "Behoudt de huidige glasgloed met een zachte schaalanimatie.";
+"Raises the icon with a cleaner shadow and less glow." = "Tilt het icoon op met een strakkere schaduw en minder gloed.";
+"Focuses on a stronger zoom while keeping the icon centered." = "Richt zich op sterker zoomen terwijl het icoon gecentreerd blijft.";
+"Adds a subtle 3D tilt for a more playful launcher feel." = "Voegt een subtiele 3D-kanteling toe voor een speelser launchergevoel.";
+"Uses a springy bounce for a more energetic hover." = "Gebruikt een veerkrachtige stuiter voor een energiekere hover.";
+"Keeps hover feedback restrained for a calmer desktop." = "Houdt hover-feedback ingetogen voor een rustiger bureaublad.";
+
 /* Background Types */
 "Background Type" = "Achtergrondtype";
 "Glass" = "Glas";

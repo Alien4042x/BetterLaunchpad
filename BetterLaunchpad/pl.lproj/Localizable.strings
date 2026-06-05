@@ -60,6 +60,36 @@
 "Created with ❤️ for macOS" = "Stworzone z ❤️ dla macOS";
 "© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
 
+/* Settings Redesign */
+"Layout" = "Układ";
+"Background" = "Tło";
+"Icons" = "Ikony";
+"Labels" = "Etykiety";
+"Advanced" = "Zaawansowane";
+"Grid" = "Siatka";
+"Preview" = "Podgląd";
+"Theme Library" = "Biblioteka motywów";
+"apps per page" = "aplikacji na stronę";
+"Choose glass or animated HTML backgrounds." = "Wybierz szklane albo animowane tła HTML.";
+"Pick how app icons react when you hover." = "Wybierz, jak ikony aplikacji reagują po najechaniu kursorem.";
+"Tune app label typography and color." = "Dostosuj typografię i kolor etykiet aplikacji.";
+"Manage theme folders and general controls." = "Zarządzaj folderami motywów i ogólnymi ustawieniami.";
+"Set grid density and icon size." = "Ustaw gęstość siatki i rozmiar ikon.";
+"The original default is Liquid Glow." = "Pierwotnym ustawieniem domyślnym jest Liquid Glow.";
+"Icon hover effect" = "Efekt po najechaniu na ikonę";
+"Liquid Glow" = "Liquid Glow";
+"Lift" = "Uniesienie";
+"Zoom" = "Powiększenie";
+"Tilt" = "Pochylenie";
+"Bounce" = "Odbicie";
+"Minimal" = "Minimalny";
+"Keeps the current glass glow with a soft scale animation." = "Zachowuje obecny szklany blask z delikatną animacją skalowania.";
+"Raises the icon with a cleaner shadow and less glow." = "Unosi ikonę z czystszym cieniem i mniejszym blaskiem.";
+"Focuses on a stronger zoom while keeping the icon centered." = "Stawia na mocniejsze powiększenie, zachowując ikonę na środku.";
+"Adds a subtle 3D tilt for a more playful launcher feel." = "Dodaje subtelne pochylenie 3D dla bardziej dynamicznego launchera.";
+"Uses a springy bounce for a more energetic hover." = "Używa sprężystego odbicia dla bardziej energicznego efektu.";
+"Keeps hover feedback restrained for a calmer desktop." = "Utrzymuje dyskretną reakcję dla spokojniejszego pulpitu.";
+
 /* Background Types */
 "Background Type" = "Typ tła";
 "Glass" = "Szkło";

@@ -2,6 +2,21 @@
 
 /* Settings */
 "settings" = "Settings";
+"Layout" = "Layout";
+"Background" = "Background";
+"Icons" = "Icons";
+"Labels" = "Labels";
+"Advanced" = "Advanced";
+"Grid" = "Grid";
+"Preview" = "Preview";
+"Theme Library" = "Theme Library";
+"apps per page" = "apps per page";
+"Choose glass or animated HTML backgrounds." = "Choose glass or animated HTML backgrounds.";
+"Pick how app icons react when you hover." = "Pick how app icons react when you hover.";
+"Tune app label typography and color." = "Tune app label typography and color.";
+"Manage theme folders and general controls." = "Manage theme folders and general controls.";
+"Set grid density and icon size." = "Set grid density and icon size.";
+"The original default is Liquid Glow." = "The original default is Liquid Glow.";
 "columns" = "Columns";
 "rows" = "Rows";
 "icon_size" = "Icon Size";
@@ -16,6 +31,19 @@
 "Background color" = "Background color";
 "Label font" = "Label font";
 "Label color" = "Label color";
+"Icon hover effect" = "Icon hover effect";
+"Liquid Glow" = "Liquid Glow";
+"Lift" = "Lift";
+"Zoom" = "Zoom";
+"Tilt" = "Tilt";
+"Bounce" = "Bounce";
+"Minimal" = "Minimal";
+"Keeps the current glass glow with a soft scale animation." = "Keeps the current glass glow with a soft scale animation.";
+"Raises the icon with a cleaner shadow and less glow." = "Raises the icon with a cleaner shadow and less glow.";
+"Focuses on a stronger zoom while keeping the icon centered." = "Focuses on a stronger zoom while keeping the icon centered.";
+"Adds a subtle 3D tilt for a more playful launcher feel." = "Adds a subtle 3D tilt for a more playful launcher feel.";
+"Uses a springy bounce for a more energetic hover." = "Uses a springy bounce for a more energetic hover.";
+"Keeps hover feedback restrained for a calmer desktop." = "Keeps hover feedback restrained for a calmer desktop.";
 "Size" = "Size";
 "Opacity" = "Opacity";
 "Family" = "Family";

@@ -3,6 +3,7 @@
 //  BetterLaunchpad
 //
 //  Created by Radim Veselý on 19.09.2025.
+//  Licensed under the MIT License.
 //
 
 import SwiftUI

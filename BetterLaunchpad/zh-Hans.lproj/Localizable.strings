@@ -60,6 +60,36 @@
 "Created with ❤️ for macOS" = "为 macOS 用 ❤️ 制作";
 "© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
 
+/* Settings Redesign */
+"Layout" = "布局";
+"Background" = "背景";
+"Icons" = "图标";
+"Labels" = "标签";
+"Advanced" = "高级";
+"Grid" = "网格";
+"Preview" = "预览";
+"Theme Library" = "主题库";
+"apps per page" = "每页应用数";
+"Choose glass or animated HTML backgrounds." = "选择玻璃效果或动画 HTML 背景。";
+"Pick how app icons react when you hover." = "选择鼠标悬停时应用图标的反应方式。";
+"Tune app label typography and color." = "调整应用标签的字体样式和颜色。";
+"Manage theme folders and general controls." = "管理主题文件夹和常规控制项。";
+"Set grid density and icon size." = "设置网格密度和图标大小。";
+"The original default is Liquid Glow." = "原始默认效果是 Liquid Glow。";
+"Icon hover effect" = "图标悬停效果";
+"Liquid Glow" = "Liquid Glow";
+"Lift" = "抬升";
+"Zoom" = "缩放";
+"Tilt" = "倾斜";
+"Bounce" = "弹跳";
+"Minimal" = "极简";
+"Keeps the current glass glow with a soft scale animation." = "保留当前玻璃光晕，并使用柔和的缩放动画。";
+"Raises the icon with a cleaner shadow and less glow." = "用更干净的阴影和更少的光晕抬升图标。";
+"Focuses on a stronger zoom while keeping the icon centered." = "增强缩放效果，同时保持图标居中。";
+"Adds a subtle 3D tilt for a more playful launcher feel." = "加入轻微 3D 倾斜，让启动器更有趣。";
+"Uses a springy bounce for a more energetic hover." = "使用弹性跳动，让悬停反馈更有活力。";
+"Keeps hover feedback restrained for a calmer desktop." = "保持克制的悬停反馈，让桌面更安静。";
+
 /* Background Types */
 "Background Type" = "背景类型";
 "Glass" = "玻璃";

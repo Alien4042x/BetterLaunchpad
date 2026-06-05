@@ -3,6 +3,7 @@
 //  BetterLaunchpad
 //
 //  Created by Radim Veselý on 17.09.2025.
+//  Licensed under the MIT License.
 //
 
 import SwiftUI
@@ -106,12 +107,16 @@ private func openAboutWindow() {
     // Create and show about window programmatically
     DispatchQueue.main.async {
         let aboutWindow = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 400, height: 500),
-            styleMask: [.titled, .closable],
+            contentRect: NSRect(x: 0, y: 0, width: 500, height: 600),
+            styleMask: [.titled, .closable, .fullSizeContentView],
             backing: .buffered,
             defer: false
         )
-        aboutWindow.title = "About BetterLaunchpad"
+        aboutWindow.title = ""
+        aboutWindow.titleVisibility = .hidden
+        aboutWindow.titlebarAppearsTransparent = true
+        aboutWindow.isOpaque = false
+        aboutWindow.backgroundColor = .clear
         aboutWindow.identifier = NSUserInterfaceItemIdentifier("about")
         aboutWindow.isReleasedWhenClosed = false
         aboutWindow.contentView = NSHostingView(rootView: AboutView())
@@ -259,7 +264,7 @@ private func removeEventMonitors() {
 }
 
 private func isAuxVisible() -> Bool {
-    // Settings signalizuješ přes @AppStorage("settingsActive")
+    // Settings publishes this state through @AppStorage("settingsActive").
     let settingsOpen = UserDefaults.standard.bool(forKey: "settingsActive")
     let aboutOpen = NSApp.windows.contains { $0.identifier?.rawValue == "about" }
     return settingsOpen || aboutOpen

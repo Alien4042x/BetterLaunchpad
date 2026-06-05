@@ -60,6 +60,36 @@
 "Created with ❤️ for macOS" = "Mit ❤️ für macOS erstellt";
 "© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
 
+/* Settings Redesign */
+"Layout" = "Layout";
+"Background" = "Hintergrund";
+"Icons" = "Symbole";
+"Labels" = "Beschriftungen";
+"Advanced" = "Erweitert";
+"Grid" = "Raster";
+"Preview" = "Vorschau";
+"Theme Library" = "Themenbibliothek";
+"apps per page" = "Apps pro Seite";
+"Choose glass or animated HTML backgrounds." = "Wählen Sie Glas- oder animierte HTML-Hintergründe.";
+"Pick how app icons react when you hover." = "Legen Sie fest, wie App-Symbole beim Darüberfahren reagieren.";
+"Tune app label typography and color." = "Passen Sie Typografie und Farbe der App-Beschriftungen an.";
+"Manage theme folders and general controls." = "Verwalten Sie Themenordner und allgemeine Steuerelemente.";
+"Set grid density and icon size." = "Legen Sie Rasterdichte und Symbolgröße fest.";
+"The original default is Liquid Glow." = "Der ursprüngliche Standard ist Liquid Glow.";
+"Icon hover effect" = "Hover-Effekt für Symbole";
+"Liquid Glow" = "Liquid Glow";
+"Lift" = "Anheben";
+"Zoom" = "Vergrößern";
+"Tilt" = "Neigen";
+"Bounce" = "Federn";
+"Minimal" = "Minimal";
+"Keeps the current glass glow with a soft scale animation." = "Behält den aktuellen Glasglanz mit einer sanften Skalierungsanimation bei.";
+"Raises the icon with a cleaner shadow and less glow." = "Hebt das Symbol mit einem klareren Schatten und weniger Glanz an.";
+"Focuses on a stronger zoom while keeping the icon centered." = "Setzt auf stärkere Vergrößerung, während das Symbol zentriert bleibt.";
+"Adds a subtle 3D tilt for a more playful launcher feel." = "Fügt eine dezente 3D-Neigung für ein spielerischeres Launcher-Gefühl hinzu.";
+"Uses a springy bounce for a more energetic hover." = "Verwendet ein federndes Springen für einen lebendigeren Hover.";
+"Keeps hover feedback restrained for a calmer desktop." = "Hält das Hover-Feedback zurückhaltend für einen ruhigeren Desktop.";
+
 /* Background Types */
 "Background Type" = "Hintergrundtyp";
 "Glass" = "Glas";

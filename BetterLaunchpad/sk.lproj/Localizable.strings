@@ -60,6 +60,36 @@
 "Created with ❤️ for macOS" = "Vytvorené s ❤️ pre macOS";
 "© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
 
+/* Settings Redesign */
+"Layout" = "Rozloženie";
+"Background" = "Pozadie";
+"Icons" = "Ikony";
+"Labels" = "Popisky";
+"Advanced" = "Pokročilé";
+"Grid" = "Mriežka";
+"Preview" = "Náhľad";
+"Theme Library" = "Knižnica tém";
+"apps per page" = "aplikácií na stránku";
+"Choose glass or animated HTML backgrounds." = "Vyberte sklenené alebo animované HTML pozadia.";
+"Pick how app icons react when you hover." = "Vyberte, ako ikony aplikácií reagujú pri prejdení myšou.";
+"Tune app label typography and color." = "Upravte typografiu a farbu popiskov aplikácií.";
+"Manage theme folders and general controls." = "Spravujte priečinky tém a všeobecné ovládanie.";
+"Set grid density and icon size." = "Nastavte hustotu mriežky a veľkosť ikon.";
+"The original default is Liquid Glow." = "Pôvodný predvolený efekt je Liquid Glow.";
+"Icon hover effect" = "Efekt pri prejdení na ikonu";
+"Liquid Glow" = "Liquid Glow";
+"Lift" = "Zdvihnutie";
+"Zoom" = "Priblíženie";
+"Tilt" = "Naklonenie";
+"Bounce" = "Odpruženie";
+"Minimal" = "Minimalistický";
+"Keeps the current glass glow with a soft scale animation." = "Zachová aktuálnu sklenenú žiaru s jemnou animáciou zväčšenia.";
+"Raises the icon with a cleaner shadow and less glow." = "Zdvihne ikonu s čistejším tieňom a menšou žiarou.";
+"Focuses on a stronger zoom while keeping the icon centered." = "Silnejšie priblíži ikonu a zachová ju v strede.";
+"Adds a subtle 3D tilt for a more playful launcher feel." = "Pridá jemné 3D naklonenie pre hravejší pocit zo spúšťača.";
+"Uses a springy bounce for a more energetic hover." = "Použije pružné odskočenie pre živší hover.";
+"Keeps hover feedback restrained for a calmer desktop." = "Udrží hover efekt decentný pre pokojnejšiu plochu.";
+
 /* Background Types */
 "Background Type" = "Typ pozadia";
 "Glass" = "Sklo";

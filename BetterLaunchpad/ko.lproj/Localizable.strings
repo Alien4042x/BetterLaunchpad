@@ -60,6 +60,36 @@
 "Created with ❤️ for macOS" = "macOS를 위해 ❤️로 제작";
 "© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
 
+/* Settings Redesign */
+"Layout" = "레이아웃";
+"Background" = "배경";
+"Icons" = "아이콘";
+"Labels" = "레이블";
+"Advanced" = "고급";
+"Grid" = "그리드";
+"Preview" = "미리보기";
+"Theme Library" = "테마 라이브러리";
+"apps per page" = "페이지당 앱 수";
+"Choose glass or animated HTML backgrounds." = "글래스 배경 또는 애니메이션 HTML 배경을 선택합니다.";
+"Pick how app icons react when you hover." = "마우스를 올렸을 때 앱 아이콘이 반응하는 방식을 선택합니다.";
+"Tune app label typography and color." = "앱 레이블의 서체와 색상을 조정합니다.";
+"Manage theme folders and general controls." = "테마 폴더와 일반 컨트롤을 관리합니다.";
+"Set grid density and icon size." = "그리드 밀도와 아이콘 크기를 설정합니다.";
+"The original default is Liquid Glow." = "원래 기본값은 Liquid Glow입니다.";
+"Icon hover effect" = "아이콘 호버 효과";
+"Liquid Glow" = "Liquid Glow";
+"Lift" = "들어올림";
+"Zoom" = "확대";
+"Tilt" = "기울기";
+"Bounce" = "바운스";
+"Minimal" = "미니멀";
+"Keeps the current glass glow with a soft scale animation." = "부드러운 크기 애니메이션으로 현재 글래스 글로우를 유지합니다.";
+"Raises the icon with a cleaner shadow and less glow." = "더 깔끔한 그림자와 적은 글로우로 아이콘을 들어 올립니다.";
+"Focuses on a stronger zoom while keeping the icon centered." = "아이콘을 중앙에 유지하면서 더 강한 확대에 집중합니다.";
+"Adds a subtle 3D tilt for a more playful launcher feel." = "은은한 3D 기울기를 추가해 런처에 더 경쾌한 느낌을 줍니다.";
+"Uses a springy bounce for a more energetic hover." = "탄력 있는 바운스로 더 활기찬 호버 반응을 만듭니다.";
+"Keeps hover feedback restrained for a calmer desktop." = "차분한 데스크톱을 위해 호버 반응을 절제합니다.";
+
 /* Background Types */
 "Background Type" = "배경 유형";
 "Glass" = "유리";

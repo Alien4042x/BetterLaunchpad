@@ -60,6 +60,36 @@
 "Created with ❤️ for macOS" = "Створено з ❤️ для macOS";
 "© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
 
+/* Settings Redesign */
+"Layout" = "Макет";
+"Background" = "Фон";
+"Icons" = "Іконки";
+"Labels" = "Підписи";
+"Advanced" = "Додатково";
+"Grid" = "Сітка";
+"Preview" = "Перегляд";
+"Theme Library" = "Бібліотека тем";
+"apps per page" = "програм на сторінку";
+"Choose glass or animated HTML backgrounds." = "Виберіть скляний або анімований HTML-фон.";
+"Pick how app icons react when you hover." = "Виберіть, як іконки реагують під час наведення.";
+"Tune app label typography and color." = "Налаштуйте типографіку й колір підписів програм.";
+"Manage theme folders and general controls." = "Керуйте папками тем і загальними елементами керування.";
+"Set grid density and icon size." = "Налаштуйте щільність сітки та розмір іконок.";
+"The original default is Liquid Glow." = "Початковий стандартний ефект — Liquid Glow.";
+"Icon hover effect" = "Ефект наведення на іконку";
+"Liquid Glow" = "Liquid Glow";
+"Lift" = "Підняття";
+"Zoom" = "Збільшення";
+"Tilt" = "Нахил";
+"Bounce" = "Відскок";
+"Minimal" = "Мінімальний";
+"Keeps the current glass glow with a soft scale animation." = "Зберігає поточне скляне сяйво з м’якою анімацією масштабування.";
+"Raises the icon with a cleaner shadow and less glow." = "Піднімає іконку з чистішою тінню та меншим сяйвом.";
+"Focuses on a stronger zoom while keeping the icon centered." = "Робить акцент на сильнішому збільшенні, зберігаючи іконку по центру.";
+"Adds a subtle 3D tilt for a more playful launcher feel." = "Додає легкий 3D-нахил для жвавішого відчуття лаунчера.";
+"Uses a springy bounce for a more energetic hover." = "Використовує пружний відскок для енергійнішого наведення.";
+"Keeps hover feedback restrained for a calmer desktop." = "Залишає реакцію стриманою для спокійнішого робочого столу.";
+
 /* Background Types */
 "Background Type" = "Тип фону";
 "Glass" = "Скло";
@@ -85,4 +115,3 @@
 "Remove from Favorites" = "Видалити з обраного";
 "No favorites yet" = "Поки немає обраного";
 "Right-click any app and select 'Add to Favorites'" = "Клацніть правою кнопкою миші на програму та виберіть 'Додати до обраного'";
-

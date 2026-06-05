@@ -60,6 +60,36 @@
 "Created with ❤️ for macOS" = "Создано с ❤️ для macOS";
 "© 2025 BetterLaunchpad" = "© 2025 BetterLaunchpad";
 
+/* Settings Redesign */
+"Layout" = "Макет";
+"Background" = "Фон";
+"Icons" = "Значки";
+"Labels" = "Подписи";
+"Advanced" = "Дополнительно";
+"Grid" = "Сетка";
+"Preview" = "Предпросмотр";
+"Theme Library" = "Библиотека тем";
+"apps per page" = "приложений на странице";
+"Choose glass or animated HTML backgrounds." = "Выберите стеклянный или анимированный HTML-фон.";
+"Pick how app icons react when you hover." = "Выберите, как значки реагируют при наведении.";
+"Tune app label typography and color." = "Настройте типографику и цвет подписей приложений.";
+"Manage theme folders and general controls." = "Управляйте папками тем и общими настройками.";
+"Set grid density and icon size." = "Настройте плотность сетки и размер значков.";
+"The original default is Liquid Glow." = "Изначальное значение по умолчанию — Liquid Glow.";
+"Icon hover effect" = "Эффект наведения на значок";
+"Liquid Glow" = "Liquid Glow";
+"Lift" = "Подъем";
+"Zoom" = "Увеличение";
+"Tilt" = "Наклон";
+"Bounce" = "Пружина";
+"Minimal" = "Минимальный";
+"Keeps the current glass glow with a soft scale animation." = "Сохраняет текущее стеклянное свечение с мягкой анимацией масштаба.";
+"Raises the icon with a cleaner shadow and less glow." = "Приподнимает значок с более чистой тенью и меньшим свечением.";
+"Focuses on a stronger zoom while keeping the icon centered." = "Делает акцент на увеличении, сохраняя значок по центру.";
+"Adds a subtle 3D tilt for a more playful launcher feel." = "Добавляет легкий 3D-наклон для более живого ощущения лаунчера.";
+"Uses a springy bounce for a more energetic hover." = "Использует пружинящий отскок для более энергичного наведения.";
+"Keeps hover feedback restrained for a calmer desktop." = "Оставляет реакцию сдержанной для более спокойного рабочего стола.";
+
 /* Background Types */
 "Background Type" = "Тип фона";
 "Glass" = "Стекло";

@@ -3,6 +3,7 @@
 //  BetterLaunchpad
 //
 //  Created by Radim Veselý on 08.12.2025.
+//  Licensed under the MIT License.
 //
 
 import Foundation

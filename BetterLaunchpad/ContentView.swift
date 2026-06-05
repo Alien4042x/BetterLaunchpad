@@ -3,6 +3,7 @@
 //  BetterLaunchpad
 //
 //  Created by Radim Veselý on 17.09.2025.
+//  Licensed under the MIT License.
 //
 
 import SwiftUI
@@ -48,7 +49,7 @@ private func fontForLabel(name: String, size: Double, weightTag: Int) -> Font {
 // MARK: - Model
 
 struct AppInfo: Identifiable, Hashable {
-    let id = UUID()
+    var id: String { path }
     let name: String
     let path: String
     let icon: NSImage
@@ -59,6 +60,15 @@ final class AppModel: ObservableObject {
     init() { loadApps() }
 
     func loadApps() {
+        DispatchQueue.global(qos: .userInitiated).async {
+            let items = Self.discoverApps()
+            DispatchQueue.main.async {
+                self.apps = items
+            }
+        }
+    }
+
+    private static func discoverApps() -> [AppInfo] {
         // Search in these root directories
         let roots = [
             "/Applications",
@@ -88,7 +98,7 @@ final class AppModel: ObservableObject {
                     seenPaths.insert(path)
 
                     let name = url.deletingPathExtension().lastPathComponent
-                    let icon = NSWorkspace.shared.icon(forFile: path)
+                    let icon = (NSWorkspace.shared.icon(forFile: path).copy() as? NSImage) ?? NSWorkspace.shared.icon(forFile: path)
                     icon.size = NSSize(width: 64, height: 64)
 
                     items.append(AppInfo(name: name, path: path, icon: icon))
@@ -98,7 +108,7 @@ final class AppModel: ObservableObject {
 
         // sort alphabetically
         items.sort { $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending }
-        DispatchQueue.main.async { self.apps = items }
+        return items
     }
 }
 
@@ -291,6 +301,7 @@ struct AppPagerView: View {
     let isDisabled: Bool
 
     @State private var page = 0
+    @State private var pageDirection = 1
     @GestureState private var drag: CGFloat = 0
 
     // wheel state
@@ -301,34 +312,48 @@ struct AppPagerView: View {
     private let wheelStep: CGFloat = 6               // how many precise delta units ≈ one page step
 
     private var perPage: Int { max(cols * rows, 1) }
-    private var pages: [[AppInfo]] {
-        stride(from: 0, to: apps.count, by: perPage).map {
-            Array(apps[$0 ..< min($0 + perPage, apps.count)])
-        }
+    private var pageCount: Int {
+        guard !apps.isEmpty else { return 0 }
+        return Int(ceil(Double(apps.count) / Double(perPage)))
+    }
+    private var currentPageApps: [AppInfo] {
+        guard pageCount > 0 else { return [] }
+        let clampedPage = min(max(page, 0), pageCount - 1)
+        let start = clampedPage * perPage
+        let end = min(start + perPage, apps.count)
+        return Array(apps[start..<end])
     }
 
     private func pageForward() {
-        guard !pages.isEmpty else { return }
-        page = (page + 1) % pages.count
+        guard pageCount > 0 else { return }
+        pageDirection = 1
+        withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) {
+            page = (page + 1) % pageCount
+        }
     }
     private func pageBackward() {
-        guard !pages.isEmpty else { return }
-        page = (page - 1 + pages.count) % pages.count
+        guard pageCount > 0 else { return }
+        pageDirection = -1
+        withAnimation(.spring(response: 0.4, dampingFraction: 0.8)) {
+            page = (page - 1 + pageCount) % pageCount
+        }
     }
 
     var body: some View {
         VStack(spacing: 14) {
             ZStack {
-                ForEach(pages.indices, id: \.self) { i in
-                    pageView(pages[i])
-                        .opacity(i == page ? 1 : 0)
-                        .scaleEffect(i == page ? 1.0 : 0.95)
-                        .animation(.spring(response: 0.4, dampingFraction: 0.8), value: page)
+                if currentPageApps.isEmpty {
+                    Text(String(localized: "No applications found"))
+                        .font(.headline)
+                        .foregroundColor(.white.opacity(0.75))
+                } else {
+                    pageView(currentPageApps)
+                        .id(page)
                 }
             }
             // Enhanced page indicators
             HStack(spacing: 8) {
-                ForEach(pages.indices, id: \.self) { i in
+                ForEach(0..<pageCount, id: \.self) { i in
                     let isActive = (i == page)
 
                     ZStack {
@@ -363,6 +388,7 @@ struct AppPagerView: View {
                     .scaleEffect(isActive ? 1.0 : 0.9)
                     .animation(.spring(response: 0.4, dampingFraction: 0.8), value: isActive)
                     .onTapGesture {
+                        pageDirection = i >= page ? 1 : -1
                         withAnimation(.spring(response: 0.5, dampingFraction: 0.8)) {
                             page = i
                         }
@@ -391,7 +417,7 @@ struct AppPagerView: View {
             // Note: UP ⇒ forward (next page)
             if dir > 0 { pageForward() } else { pageBackward() }
         }
-        .onChange(of: pages.count) { _, newCount in
+        .onChange(of: pageCount) { _, newCount in
             if newCount == 0 { page = 0 }
             else { page = (page % newCount + newCount) % newCount }
         }
@@ -481,8 +507,8 @@ struct AppPagerView: View {
             }
         }
         .transition(.asymmetric(
-            insertion: .move(edge: .trailing).combined(with: .opacity).combined(with: .scale(scale: 0.95)),
-            removal:   .move(edge: .leading).combined(with: .opacity).combined(with: .scale(scale: 1.05))
+            insertion: .move(edge: pageDirection >= 0 ? .trailing : .leading).combined(with: .opacity).combined(with: .scale(scale: 0.95)),
+            removal:   .move(edge: pageDirection >= 0 ? .leading : .trailing).combined(with: .opacity).combined(with: .scale(scale: 1.05))
         ))
     }
 }
@@ -499,6 +525,7 @@ struct AppIconCell: View {
     @AppStorage("labelFontSize") private var labelFontSize: Double = 12
     @AppStorage("labelFontWeight") private var labelFontWeight: Int = 0
     @AppStorage("labelFontName") private var labelFontName: String = "System"
+    @AppStorage("iconHoverEffect") private var iconHoverEffect: Int = 0
 
     @AppStorage("labelR") private var labelR: Double = 0.0
     @AppStorage("labelG") private var labelG: Double = 0.0
@@ -509,13 +536,13 @@ struct AppIconCell: View {
         VStack(spacing: 10) {
             ZStack {
                 // Enhanced background glow effect
-                if hovering {
+                if hovering && glowOpacity > 0 {
                     RoundedRectangle(cornerRadius: 20, style: .continuous)
                         .fill(
                             RadialGradient(
                                 colors: [
-                                    Color.white.opacity(0.15),
-                                    Color.white.opacity(0.05),
+                                    Color.white.opacity(glowOpacity),
+                                    Color.white.opacity(glowOpacity * 0.32),
                                     Color.clear
                                 ],
                                 center: .center,
@@ -523,7 +550,7 @@ struct AppIconCell: View {
                                 endRadius: iconSize * 0.8
                             )
                         )
-                        .frame(width: iconSize + 20, height: iconSize + 20)
+                        .frame(width: iconSize + glowExpansion, height: iconSize + glowExpansion)
                         .animation(.easeInOut(duration: 0.3), value: hovering)
                 }
 
@@ -546,12 +573,18 @@ struct AppIconCell: View {
                             )
                     )
                     .shadow(
-                        color: Color.black.opacity(hovering ? 0.25 : 0.15),
-                        radius: hovering ? 15 : 8,
+                        color: Color.black.opacity(hovering ? hoverShadowOpacity : 0.15),
+                        radius: hovering ? hoverShadowRadius : 8,
                         x: 0,
-                        y: hovering ? 8 : 4
+                        y: hovering ? hoverShadowY : 4
                     )
-                    .scaleEffect(pressed ? 0.95 : (hovering ? 1.08 : 1.0))
+                    .scaleEffect(pressed ? 0.95 : (hovering ? hoverScale : 1.0))
+                    .offset(y: hovering ? hoverOffsetY : 0)
+                    .rotation3DEffect(
+                        .degrees(hovering ? hoverTiltDegrees : 0),
+                        axis: (x: 1, y: -1, z: 0),
+                        perspective: 0.65
+                    )
                     .animation(.spring(response: 0.3, dampingFraction: 0.8), value: hovering)
                     .animation(.spring(response: 0.2, dampingFraction: 0.9), value: pressed)
             }
@@ -610,6 +643,73 @@ struct AppIconCell: View {
                 .animation(.spring(response: 0.3, dampingFraction: 0.8), value: hovering)
         }
         .padding(8)
+    }
+
+    private var hoverScale: CGFloat {
+        switch iconHoverEffect {
+        case 1: return 1.04
+        case 2: return 1.15
+        case 3: return 1.07
+        case 4: return 1.12
+        case 5: return 1.02
+        default: return 1.08
+        }
+    }
+
+    private var hoverOffsetY: CGFloat {
+        switch iconHoverEffect {
+        case 1: return -8
+        case 4: return -5
+        default: return 0
+        }
+    }
+
+    private var hoverTiltDegrees: Double {
+        iconHoverEffect == 3 ? 10 : 0
+    }
+
+    private var glowOpacity: Double {
+        switch iconHoverEffect {
+        case 1: return 0.08
+        case 2: return 0.10
+        case 3: return 0.14
+        case 4: return 0.18
+        case 5: return 0
+        default: return 0.15
+        }
+    }
+
+    private var glowExpansion: CGFloat {
+        switch iconHoverEffect {
+        case 2: return 28
+        case 4: return 30
+        default: return 20
+        }
+    }
+
+    private var hoverShadowOpacity: Double {
+        switch iconHoverEffect {
+        case 1: return 0.32
+        case 5: return 0.18
+        default: return 0.25
+        }
+    }
+
+    private var hoverShadowRadius: CGFloat {
+        switch iconHoverEffect {
+        case 1: return 18
+        case 2: return 16
+        case 5: return 10
+        default: return 15
+        }
+    }
+
+    private var hoverShadowY: CGFloat {
+        switch iconHoverEffect {
+        case 1: return 14
+        case 5: return 5
+        default: return 8
+        }
     }
 }
 
