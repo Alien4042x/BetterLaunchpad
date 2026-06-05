@@ -20,20 +20,20 @@ struct GlassSearchBar: View {
         HStack(spacing: 12) {
                 Image(systemName: "magnifyingglass")
                     .font(.system(size: 15, weight: .medium))
-                    .foregroundStyle(focused ? .primary : .secondary)
+                    .foregroundStyle(focused ? Color.white : Color.white.opacity(0.68))
                     .scaleEffect(focused ? 1.1 : 1.0)
                     .animation(.spring(response: 0.3, dampingFraction: 0.7), value: focused)
 
                 TextField("", text: $text)
                     .textFieldStyle(.plain)
                     .font(.system(size: 16, weight: .medium))
+                    .foregroundStyle(Color.white)
                     .focused($focused)
                     .overlay(alignment: .leading) {
                         if text.isEmpty {
                             Text(placeholder)
                                 .font(.system(size: 16, weight: .regular))
-                                .foregroundStyle(.secondary)
-                                .opacity(focused ? 0.8 : 0.6)
+                                .foregroundStyle(Color.white.opacity(focused ? 0.62 : 0.48))
                                 .animation(.easeInOut(duration: 0.2), value: focused)
                         }
                     }
@@ -49,7 +49,7 @@ struct GlassSearchBar: View {
                 }) {
                     Image(systemName: "xmark.circle.fill")
                         .font(.system(size: 15, weight: .medium))
-                        .foregroundStyle(.tertiary)
+                        .foregroundStyle(Color.white.opacity(0.52))
                         .opacity(text.isEmpty ? 0 : 1)
                         .scaleEffect(text.isEmpty ? 0.8 : 1.0)
                         .animation(.spring(response: 0.3, dampingFraction: 0.7), value: text.isEmpty)
@@ -63,7 +63,31 @@ struct GlassSearchBar: View {
             }
             .padding(.horizontal, 16)
         .frame(width: 540, height: 48)
-        .glassEffect(.regular.interactive(), in: .capsule)
+        .background(
+            ZStack {
+                VisualEffectView(
+                    material: .hudWindow,
+                    blendingMode: .withinWindow,
+                    state: .active
+                )
+
+                LinearGradient(
+                    colors: [
+                        Color.black.opacity(focused ? 0.32 : 0.24),
+                        Color.white.opacity(isHovering ? 0.10 : 0.06)
+                    ],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+            }
+            .clipShape(Capsule())
+        )
+        .overlay(
+            Capsule()
+                .stroke(Color.white.opacity(focused ? 0.24 : 0.14), lineWidth: 1)
+        )
+        .shadow(color: Color.black.opacity(0.28), radius: 16, y: 8)
+        .environment(\.colorScheme, .dark)
         .onAppear {
             // Try multiple times to ensure focus is set
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {

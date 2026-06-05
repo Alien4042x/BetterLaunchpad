@@ -247,7 +247,7 @@ struct ContentView: View {
         .overlay(
             Group {
                 if showFavoritesModal {
-                    Color.black.opacity(0.3)
+                    Color.black.opacity(0.42)
                         .ignoresSafeArea()
                         .onTapGesture { showFavoritesModal = false }
                     

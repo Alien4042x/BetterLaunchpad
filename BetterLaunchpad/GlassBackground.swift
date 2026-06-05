@@ -59,8 +59,7 @@ struct VisualEffectView: NSViewRepresentable {
         effectView.wantsLayer = true
         effectView.isEmphasized = false
 
-        // Force the view to be transparent
-        effectView.appearance = NSAppearance(named: .aqua)
+        effectView.appearance = NSAppearance(named: .darkAqua)
 
         // Ensure the effect view fills its container
         effectView.autoresizingMask = [.width, .height]
@@ -72,5 +71,6 @@ struct VisualEffectView: NSViewRepresentable {
         nsView.material = material
         nsView.blendingMode = blendingMode
         nsView.state = state
+        nsView.appearance = NSAppearance(named: .darkAqua)
     }
 }

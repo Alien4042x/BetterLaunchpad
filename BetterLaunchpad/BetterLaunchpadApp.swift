@@ -345,8 +345,7 @@ struct TransparentBlurView: NSViewRepresentable {
         v.state = followsActive ? .followsWindowActiveState : .active
         v.wantsLayer = true
 
-        // Ensure the view is properly configured for transparency
-        v.appearance = NSAppearance(named: .aqua)
+        v.appearance = NSAppearance(named: .darkAqua)
 
         // Force transparency for glass effect
         v.alphaValue = 1.0
@@ -359,5 +358,6 @@ struct TransparentBlurView: NSViewRepresentable {
         nsView.material = material
         nsView.blendingMode = blending
         nsView.state = followsActive ? .followsWindowActiveState : .active
+        nsView.appearance = NSAppearance(named: .darkAqua)
     }
 }
