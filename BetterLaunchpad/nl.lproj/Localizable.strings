@@ -83,7 +83,7 @@
 "Tilt" = "Kantelen";
 "Bounce" = "Stuiteren";
 "Minimal" = "Minimaal";
-"Keeps the current glass glow with a soft scale animation." = "Behoudt de huidige glasgloed met een zachte schaalanimatie.";
+"Shows a subtle cyan glow on the icon and label without scaling." = "Toont een subtiele cyaankleurige gloed op het icoon en label zonder te vergroten.";
 "Raises the icon with a cleaner shadow and less glow." = "Tilt het icoon op met een strakkere schaduw en minder gloed.";
 "Focuses on a stronger zoom while keeping the icon centered." = "Richt zich op sterker zoomen terwijl het icoon gecentreerd blijft.";
 "Adds a subtle 3D tilt for a more playful launcher feel." = "Voegt een subtiele 3D-kanteling toe voor een speelser launchergevoel.";

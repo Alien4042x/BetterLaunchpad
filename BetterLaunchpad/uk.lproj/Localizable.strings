@@ -83,7 +83,7 @@
 "Tilt" = "Нахил";
 "Bounce" = "Відскок";
 "Minimal" = "Мінімальний";
-"Keeps the current glass glow with a soft scale animation." = "Зберігає поточне скляне сяйво з м’якою анімацією масштабування.";
+"Shows a subtle cyan glow on the icon and label without scaling." = "Показує м’яке блакитне сяйво на іконці та підписі без збільшення.";
 "Raises the icon with a cleaner shadow and less glow." = "Піднімає іконку з чистішою тінню та меншим сяйвом.";
 "Focuses on a stronger zoom while keeping the icon centered." = "Робить акцент на сильнішому збільшенні, зберігаючи іконку по центру.";
 "Adds a subtle 3D tilt for a more playful launcher feel." = "Додає легкий 3D-нахил для жвавішого відчуття лаунчера.";

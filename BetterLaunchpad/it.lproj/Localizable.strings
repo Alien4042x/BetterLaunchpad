@@ -83,7 +83,7 @@
 "Tilt" = "Inclinazione";
 "Bounce" = "Rimbalzo";
 "Minimal" = "Minimale";
-"Keeps the current glass glow with a soft scale animation." = "Mantiene l’attuale bagliore in vetro con una morbida animazione di scala.";
+"Shows a subtle cyan glow on the icon and label without scaling." = "Mostra un bagliore ciano delicato sull’icona e sull’etichetta senza ingrandirle.";
 "Raises the icon with a cleaner shadow and less glow." = "Solleva l’icona con un’ombra più pulita e meno bagliore.";
 "Focuses on a stronger zoom while keeping the icon centered." = "Punta su uno zoom più marcato mantenendo l’icona centrata.";
 "Adds a subtle 3D tilt for a more playful launcher feel." = "Aggiunge una leggera inclinazione 3D per un launcher più vivace.";

@@ -83,7 +83,7 @@
 "Tilt" = "Pochylenie";
 "Bounce" = "Odbicie";
 "Minimal" = "Minimalny";
-"Keeps the current glass glow with a soft scale animation." = "Zachowuje obecny szklany blask z delikatną animacją skalowania.";
+"Shows a subtle cyan glow on the icon and label without scaling." = "Pokazuje subtelną cyjanową poświatę na ikonie i etykiecie bez powiększania.";
 "Raises the icon with a cleaner shadow and less glow." = "Unosi ikonę z czystszym cieniem i mniejszym blaskiem.";
 "Focuses on a stronger zoom while keeping the icon centered." = "Stawia na mocniejsze powiększenie, zachowując ikonę na środku.";
 "Adds a subtle 3D tilt for a more playful launcher feel." = "Dodaje subtelne pochylenie 3D dla bardziej dynamicznego launchera.";

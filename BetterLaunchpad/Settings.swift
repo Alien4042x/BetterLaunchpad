@@ -518,7 +518,7 @@ struct SettingsView: View {
         case 3: return String(localized: "Adds a subtle 3D tilt for a more playful launcher feel.")
         case 4: return String(localized: "Uses a springy bounce for a more energetic hover.")
         case 5: return String(localized: "Keeps hover feedback restrained for a calmer desktop.")
-        default: return String(localized: "Keeps the current glass glow with a soft scale animation.")
+        default: return String(localized: "Shows a subtle cyan glow on the icon and label without scaling.")
         }
     }
 

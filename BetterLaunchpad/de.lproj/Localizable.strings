@@ -83,7 +83,7 @@
 "Tilt" = "Neigen";
 "Bounce" = "Federn";
 "Minimal" = "Minimal";
-"Keeps the current glass glow with a soft scale animation." = "Behält den aktuellen Glasglanz mit einer sanften Skalierungsanimation bei.";
+"Shows a subtle cyan glow on the icon and label without scaling." = "Zeigt einen dezenten cyanfarbenen Schein auf Icon und Beschriftung, ohne sie zu vergrößern.";
 "Raises the icon with a cleaner shadow and less glow." = "Hebt das Symbol mit einem klareren Schatten und weniger Glanz an.";
 "Focuses on a stronger zoom while keeping the icon centered." = "Setzt auf stärkere Vergrößerung, während das Symbol zentriert bleibt.";
 "Adds a subtle 3D tilt for a more playful launcher feel." = "Fügt eine dezente 3D-Neigung für ein spielerischeres Launcher-Gefühl hinzu.";

@@ -366,7 +366,7 @@ struct FavoriteAppCell: View {
                                 .fill(
                                     RadialGradient(
                                         colors: [
-                                            Color.white.opacity(glowOpacity),
+                                            glowTint.opacity(glowOpacity),
                                             Color.white.opacity(glowOpacity * 0.28),
                                             Color.clear
                                         ],
@@ -402,6 +402,18 @@ struct FavoriteAppCell: View {
                                 x: 0,
                                 y: hovering ? hoverShadowY : 4
                             )
+                            .shadow(
+                                color: liquidGlowActive ? Color.cyan.opacity(0.42) : Color.clear,
+                                radius: liquidGlowActive ? 9 : 0,
+                                x: 0,
+                                y: 0
+                            )
+                            .shadow(
+                                color: liquidGlowActive ? Color.blue.opacity(0.18) : Color.clear,
+                                radius: liquidGlowActive ? 15 : 0,
+                                x: 0,
+                                y: 0
+                            )
                             .scaleEffect(pressed ? 0.95 : (hovering ? hoverScale : 1.0))
                             .offset(y: hovering ? hoverOffsetY : 0)
                             .rotation3DEffect(
@@ -418,6 +430,18 @@ struct FavoriteAppCell: View {
                         .lineLimit(1)
                         .frame(maxWidth: iconSize + 34)
                         .shadow(color: Color.black.opacity(0.24), radius: 1, x: 0, y: 1)
+                        .shadow(
+                            color: liquidGlowActive ? Color.cyan.opacity(0.52) : Color.clear,
+                            radius: liquidGlowActive ? 4 : 0,
+                            x: 0,
+                            y: 0
+                        )
+                        .shadow(
+                            color: liquidGlowActive ? Color.blue.opacity(0.22) : Color.clear,
+                            radius: liquidGlowActive ? 7 : 0,
+                            x: 0,
+                            y: 0
+                        )
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
 
@@ -483,66 +507,82 @@ struct FavoriteAppCell: View {
 
     private var hoverScale: CGFloat {
         switch iconHoverEffect {
-        case 1: return 1.04
-        case 2: return 1.15
-        case 3: return 1.07
-        case 4: return 1.12
-        case 5: return 1.02
-        default: return 1.08
+        case 1: return 1.02
+        case 2: return 1.22
+        case 3: return 1.05
+        case 4: return 1.07
+        case 5: return 1.015
+        default: return 1.0
         }
+    }
+
+    private var liquidGlowActive: Bool {
+        hovering && iconHoverEffect == 0
     }
 
     private var hoverOffsetY: CGFloat {
         switch iconHoverEffect {
-        case 1: return -8
-        case 4: return -5
+        case 1: return -12
+        case 4: return -16
         default: return 0
         }
     }
 
     private var hoverTiltDegrees: Double {
-        iconHoverEffect == 3 ? 10 : 0
+        iconHoverEffect == 3 ? 13 : 0
     }
 
     private var glowOpacity: Double {
         switch iconHoverEffect {
-        case 1: return 0.08
-        case 2: return 0.10
-        case 3: return 0.14
-        case 4: return 0.18
+        case 1: return 0.02
+        case 2: return 0
+        case 3: return 0.06
+        case 4: return 0.04
         case 5: return 0
-        default: return 0.15
+        default: return 0.14
+        }
+    }
+
+    private var glowTint: Color {
+        switch iconHoverEffect {
+        case 0: return .cyan
+        default: return .white
         }
     }
 
     private var glowExpansion: CGFloat {
         switch iconHoverEffect {
-        case 2: return 28
-        case 4: return 30
-        default: return 20
+        case 3: return 26
+        case 4: return 18
+        default: return 16
         }
     }
 
     private var hoverShadowOpacity: Double {
         switch iconHoverEffect {
-        case 1: return 0.32
+        case 1: return 0.40
+        case 2: return 0.20
+        case 4: return 0.42
         case 5: return 0.18
-        default: return 0.25
+        default: return 0.24
         }
     }
 
     private var hoverShadowRadius: CGFloat {
         switch iconHoverEffect {
-        case 1: return 18
-        case 2: return 16
+        case 1: return 22
+        case 2: return 12
+        case 4: return 24
         case 5: return 10
-        default: return 15
+        default: return 16
         }
     }
 
     private var hoverShadowY: CGFloat {
         switch iconHoverEffect {
-        case 1: return 14
+        case 1: return 17
+        case 2: return 6
+        case 4: return 20
         case 5: return 5
         default: return 8
         }

@@ -83,7 +83,7 @@
 "Tilt" = "Naklonenie";
 "Bounce" = "Odpruženie";
 "Minimal" = "Minimalistický";
-"Keeps the current glass glow with a soft scale animation." = "Zachová aktuálnu sklenenú žiaru s jemnou animáciou zväčšenia.";
+"Shows a subtle cyan glow on the icon and label without scaling." = "Zobrazí jemnú azúrovú žiaru na ikone aj popisku bez zväčšenia.";
 "Raises the icon with a cleaner shadow and less glow." = "Zdvihne ikonu s čistejším tieňom a menšou žiarou.";
 "Focuses on a stronger zoom while keeping the icon centered." = "Silnejšie priblíži ikonu a zachová ju v strede.";
 "Adds a subtle 3D tilt for a more playful launcher feel." = "Pridá jemné 3D naklonenie pre hravejší pocit zo spúšťača.";

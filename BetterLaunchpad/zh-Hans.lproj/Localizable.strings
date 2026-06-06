@@ -83,7 +83,7 @@
 "Tilt" = "倾斜";
 "Bounce" = "弹跳";
 "Minimal" = "极简";
-"Keeps the current glass glow with a soft scale animation." = "保留当前玻璃光晕，并使用柔和的缩放动画。";
+"Shows a subtle cyan glow on the icon and label without scaling." = "在图标和标签上显示柔和的青色光晕，但不放大。";
 "Raises the icon with a cleaner shadow and less glow." = "用更干净的阴影和更少的光晕抬升图标。";
 "Focuses on a stronger zoom while keeping the icon centered." = "增强缩放效果，同时保持图标居中。";
 "Adds a subtle 3D tilt for a more playful launcher feel." = "加入轻微 3D 倾斜，让启动器更有趣。";

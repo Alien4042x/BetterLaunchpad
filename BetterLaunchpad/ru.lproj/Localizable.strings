@@ -83,7 +83,7 @@
 "Tilt" = "Наклон";
 "Bounce" = "Пружина";
 "Minimal" = "Минимальный";
-"Keeps the current glass glow with a soft scale animation." = "Сохраняет текущее стеклянное свечение с мягкой анимацией масштаба.";
+"Shows a subtle cyan glow on the icon and label without scaling." = "Показывает мягкое бирюзовое свечение на значке и подписи без увеличения.";
 "Raises the icon with a cleaner shadow and less glow." = "Приподнимает значок с более чистой тенью и меньшим свечением.";
 "Focuses on a stronger zoom while keeping the icon centered." = "Делает акцент на увеличении, сохраняя значок по центру.";
 "Adds a subtle 3D tilt for a more playful launcher feel." = "Добавляет легкий 3D-наклон для более живого ощущения лаунчера.";

@@ -83,7 +83,7 @@
 "Tilt" = "기울기";
 "Bounce" = "바운스";
 "Minimal" = "미니멀";
-"Keeps the current glass glow with a soft scale animation." = "부드러운 크기 애니메이션으로 현재 글래스 글로우를 유지합니다.";
+"Shows a subtle cyan glow on the icon and label without scaling." = "크기 변경 없이 아이콘과 라벨에 은은한 시안색 광채를 표시합니다.";
 "Raises the icon with a cleaner shadow and less glow." = "더 깔끔한 그림자와 적은 글로우로 아이콘을 들어 올립니다.";
 "Focuses on a stronger zoom while keeping the icon centered." = "아이콘을 중앙에 유지하면서 더 강한 확대에 집중합니다.";
 "Adds a subtle 3D tilt for a more playful launcher feel." = "은은한 3D 기울기를 추가해 런처에 더 경쾌한 느낌을 줍니다.";

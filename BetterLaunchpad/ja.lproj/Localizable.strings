@@ -83,7 +83,7 @@
 "Tilt" = "傾き";
 "Bounce" = "バウンス";
 "Minimal" = "ミニマル";
-"Keeps the current glass glow with a soft scale animation." = "現在のガラス風の光彩を、柔らかな拡大アニメーションで維持します。";
+"Shows a subtle cyan glow on the icon and label without scaling." = "アイコンとラベルに控えめなシアンの光彩を表示し、拡大はしません。";
 "Raises the icon with a cleaner shadow and less glow." = "よりすっきりした影と控えめな光彩でアイコンを持ち上げます。";
 "Focuses on a stronger zoom while keeping the icon centered." = "アイコンを中央に保ちながら、より強いズームを重視します。";
 "Adds a subtle 3D tilt for a more playful launcher feel." = "控えめな3D傾きを加えて、ランチャーに遊び心を出します。";
