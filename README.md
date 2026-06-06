@@ -1,10 +1,26 @@
 # BetterLaunchpad
 
-BetterLaunchpad is a macOS application launcher with a paginated app grid, search, favorites, configurable layout, and custom backgrounds.
+<div align="center">
 
-It was built as a replacement for the system Applications-style view, with more control over spacing, appearance, and navigation.
+*A modern replacement for the system "Applications" view (Tahoe style) that I didn’t like.*
+
+> **Compatibility:** Requires macOS Tahoe 26+ (older versions are no longer supported).
+
+![BetterLaunchpad Logo](https://img.shields.io/badge/BetterLaunchpad-v1.3-blue?style=for-the-badge&logo=apple)
+
+**A modern, customizable application launcher for macOS**
 
 <img width="3552" height="1406" alt="BetterLaunchpad" src="https://github.com/user-attachments/assets/7b6a02d0-54d4-4876-ac47-f5626b1e62c5" />
+
+[![macOS](https://img.shields.io/badge/macOS-26%2B-blue?style=flat-square&logo=apple)](https://www.apple.com/macos/)
+[![Swift](https://img.shields.io/badge/Swift-6.2-orange?style=flat-square&logo=swift)](https://swift.org/)
+[![SwiftUI](https://img.shields.io/badge/SwiftUI-6-blue?style=flat-square&logo=swift)](https://developer.apple.com/xcode/swiftui/)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
+[![Downloads](https://img.shields.io/github/downloads/Alien4042x/BetterLaunchpad/total)](https://github.com/Alien4042x/BetterLaunchpad/releases)
+
+[Features](#features) • [Installation](#installation) • [Usage](#usage) • [Localization](#localization) • [Contributing](#contributing)
+
+</div>
 
 ## Features
 
@@ -132,6 +148,10 @@ BetterLaunchpad/
 │   └── HTMLThemes/
 └── *.lproj/
 ```
+
+## Contributing
+
+Issues and pull requests are welcome. Keep changes focused and include screenshots for UI changes when possible.
 
 ## License
 
