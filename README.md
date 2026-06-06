@@ -4,6 +4,8 @@ BetterLaunchpad is a macOS application launcher with a paginated app grid, searc
 
 It was built as a replacement for the system Applications-style view, with more control over spacing, appearance, and navigation.
 
+<img width="3552" height="1406" alt="BetterLaunchpad" src="https://github.com/user-attachments/assets/7b6a02d0-54d4-4876-ac47-f5626b1e62c5" />
+
 ## Features
 
 - Custom grid layout with configurable rows, columns, and icon size
