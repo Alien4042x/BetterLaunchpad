@@ -117,20 +117,24 @@ struct AboutView: View {
             VStack(spacing: 5) {
                 Text(String(localized: "BetterLaunchpad"))
                     .font(.system(size: 40, weight: .bold))
-                    .foregroundStyle(.primary)
+                    .foregroundStyle(.white)
+                    .shadow(color: .black.opacity(0.45), radius: 2, x: 0, y: 1)
 
                 Text(String(localized: "A modern, customizable application launcher for macOS"))
                     .font(.headline)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.white.opacity(0.78))
+                    .shadow(color: .black.opacity(0.36), radius: 1, x: 0, y: 1)
 
                 Text("v\(version)")
                     .font(.subheadline.weight(.medium))
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.white.opacity(0.68))
+                    .shadow(color: .black.opacity(0.32), radius: 1, x: 0, y: 1)
             }
 
             Text(String(localized: "Liquid Glass Effects"))
                 .font(.caption.weight(.semibold))
-                .foregroundColor(.secondary)
+                .foregroundColor(.white.opacity(0.82))
+                .shadow(color: .black.opacity(0.30), radius: 1, x: 0, y: 1)
                 .padding(.horizontal, 12)
                 .padding(.vertical, 7)
                 .background(
@@ -213,11 +217,13 @@ private struct AboutFeatureRow: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text(title)
                     .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(.primary)
+                    .foregroundStyle(.white)
+                    .shadow(color: .black.opacity(0.32), radius: 1, x: 0, y: 1)
 
                 Text(description)
                     .font(.caption)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.white.opacity(0.72))
+                    .shadow(color: .black.opacity(0.26), radius: 1, x: 0, y: 1)
                     .lineLimit(2)
             }
 
@@ -248,7 +254,8 @@ private struct AboutInfoPill: View {
                 .font(.caption.weight(.medium))
                 .lineLimit(1)
         }
-        .foregroundColor(.secondary)
+        .foregroundColor(.white.opacity(0.78))
+        .shadow(color: .black.opacity(0.28), radius: 1, x: 0, y: 1)
         .padding(.horizontal, 10)
         .padding(.vertical, 7)
         .background(
