@@ -297,6 +297,7 @@ func makeWindowNice() {
     window.hasShadow = true
 
     window.ignoresMouseEvents = false
+    window.acceptsMouseMovedEvents = true
 
     window.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary, .stationary]
     window.level = .normal

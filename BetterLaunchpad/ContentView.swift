@@ -281,7 +281,7 @@ struct ContentView: View {
         }
         .onChange(of: selectedHTML) { oldValue, newValue in
             if backgroundMode == 1 {
-                htmlBackgroundReady = false
+                htmlBackgroundReady = findThemeURL(themeName: newValue) == nil
             }
         }
     }
@@ -863,8 +863,14 @@ struct HTMLBackgroundView: NSViewRepresentable {
         }
 
         view.navigationDelegate = context.coordinator
+        context.coordinator.installMouseTracking(for: view)
         load(into: view)
         return view
+    }
+
+    static func dismantleNSView(_ nsView: WKWebView, coordinator: Coordinator) {
+        coordinator.removeMouseTracking()
+        nsView.navigationDelegate = nil
     }
 
     func updateNSView(_ nsView: WKWebView, context: Context) {
@@ -881,6 +887,10 @@ struct HTMLBackgroundView: NSViewRepresentable {
     class Coordinator: NSObject, WKNavigationDelegate {
         let onReady: () -> Void
         var currentPath: String
+        private weak var webView: WKWebView?
+        private var mouseMonitor: Any?
+        private var mouseWasInside = false
+        private var lastMouseUpdate: TimeInterval = 0
         
         init(onReady: @escaping () -> Void, initialPath: String) {
             self.onReady = onReady
@@ -891,6 +901,58 @@ struct HTMLBackgroundView: NSViewRepresentable {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 self.onReady()
             }
+        }
+
+        func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+            NSLog("HTML background failed to load: %@", error.localizedDescription)
+            onReady()
+        }
+
+        func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+            NSLog("HTML background failed to load: %@", error.localizedDescription)
+            onReady()
+        }
+
+        func installMouseTracking(for webView: WKWebView) {
+            self.webView = webView
+            mouseMonitor = NSEvent.addLocalMonitorForEvents(matching: [.mouseMoved, .leftMouseDragged, .rightMouseDragged, .otherMouseDragged]) { [weak self] event in
+                self?.forwardMouse(event)
+                return event
+            }
+        }
+
+        func removeMouseTracking() {
+            if let mouseMonitor {
+                NSEvent.removeMonitor(mouseMonitor)
+                self.mouseMonitor = nil
+            }
+            webView = nil
+        }
+
+        private func forwardMouse(_ event: NSEvent) {
+            guard let webView, let window = webView.window else { return }
+
+            let point = webView.convert(event.locationInWindow, from: nil)
+            let x = Int(point.x.rounded())
+            let y = Int((webView.isFlipped ? point.y : webView.bounds.height - point.y).rounded())
+            let inside = event.window === window && x >= 0 && y >= 0 && x < Int(webView.bounds.width) && y < Int(webView.bounds.height)
+
+            guard inside else {
+                if mouseWasInside {
+                    mouseWasInside = false
+                    webView.evaluateJavaScript("window.dispatchEvent(new Event('mouseleave'))", completionHandler: nil)
+                }
+                return
+            }
+
+            mouseWasInside = true
+            let now = ProcessInfo.processInfo.systemUptime
+            guard now - lastMouseUpdate >= 1.0 / 30.0 else { return }
+            lastMouseUpdate = now
+
+            // The web view is click-through, so pass pointer motion to the theme's DOM.
+            let script = "document.elementFromPoint(\(x), \(y))?.dispatchEvent(new MouseEvent('mousemove', {clientX: \(x), clientY: \(y), bubbles: true}))"
+            webView.evaluateJavaScript(script, completionHandler: nil)
         }
     }
 

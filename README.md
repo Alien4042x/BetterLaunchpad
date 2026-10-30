@@ -6,7 +6,7 @@
 
 > **Compatibility:** Requires macOS Tahoe 26+ (older versions are no longer supported).
 
-![BetterLaunchpad Logo](https://img.shields.io/badge/BetterLaunchpad-v1.3-blue?style=for-the-badge&logo=apple)
+![BetterLaunchpad Logo](https://img.shields.io/badge/BetterLaunchpad-v1.3.1-blue?style=for-the-badge&logo=apple)
 
 **A modern, customizable application launcher for macOS**
 
